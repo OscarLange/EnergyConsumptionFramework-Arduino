@@ -1,0 +1,4 @@
+source "/home/oscar/esp_vscode/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/home/oscar/esp_vscode/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "/home/oscar/esp_vscode/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/home/oscar/esp_vscode/esp-idf/components/partition_table/Kconfig.projbuild"
