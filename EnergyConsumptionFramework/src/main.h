@@ -8,6 +8,7 @@
 #include "tcp.h"
 #include <structs.h>
 #include <sstream>
+#include "esp_pm.h"
 
 class Main final
 {

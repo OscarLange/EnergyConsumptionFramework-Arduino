@@ -19,7 +19,7 @@
 //Increase this if print_real_time_stats returns ESP_ERR_INVALID_SIZE
 #define ARRAY_SIZE_OFFSET   5 
 
-static char task_name[configMAX_TASK_NAME_LEN] = "spin_task";
+static char task_name[configMAX_TASK_NAME_LEN] = "work_task";
 static SemaphoreHandle_t sync_spin_task;
 static SemaphoreHandle_t sync_spin_done;
 static SemaphoreHandle_t sync_done;
@@ -88,6 +88,8 @@ void calculate_real_time_stats(uint32_t start_run_time, TaskStatus_t *start_arra
 
 static void spin_task(void *arg)
 {
+    volatile int a,b = 30000;
+    volatile int c = 0;
     //wait for sync start
     xSemaphoreTake(sync_spin_task, portMAX_DELAY);
     //cycle until given semaphore
@@ -96,10 +98,19 @@ static void spin_task(void *arg)
         if(xSemaphoreTake(sync_spin_done, pdMS_TO_TICKS(100)) == pdTRUE){
             break;
         }
+
+        #ifdef SPIN_WORK
         //Consume CPU cycles
         for (int i = 0; i < SPIN_ITER; i++) {
             __asm__ __volatile__("NOP");
         }
+        #endif
+
+        #ifdef ADD_WORK
+        for (int i = 0; i < SPIN_ITER; i++) {
+            c = a + b;
+        }
+        #endif
     }
     //terminate task
     vTaskDelay(pdMS_TO_TICKS(100));
@@ -141,6 +152,7 @@ void collect_stats(struct TABLE_ENTRY entries[])
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 
+    //actuall work time for other processor/task
     vTaskDelay(pdMS_TO_TICKS(10000));
 
     //Allocate array to store current task states

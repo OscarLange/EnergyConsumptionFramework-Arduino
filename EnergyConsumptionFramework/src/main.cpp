@@ -62,6 +62,13 @@ void Main::run(void)
     std::cout << end_msg << "\n";
     while(App.send_msg(end_msg) == false){}
 
+    //get frequency
+    esp_pm_config_esp32_t pm_config;
+
+    esp_pm_get_configuration(&pm_config);
+
+    printf("Frequency: %d", pm_config.max_freq_mhz);
+
     //building string
     std::stringstream entries_stream{};
     for(auto &entry: entries)
@@ -70,8 +77,9 @@ void Main::run(void)
         std::cout << "name: " << s_entry << "\n";
         if(s_entry.substr(0, sizeof(NONE_VALUE)) != std::string(NONE_VALUE))
         {
-            entries_stream << entry.task_name << "," << entry.elapsed_time << "," << entry.percentage_time << ";";
+            entries_stream << entry.task_name << "," << entry.elapsed_time << "," << entry.percentage_time <<";";
         }
+        entries_stream << "MIN_FREQ," << pm_config.min_freq_mhz << ";MAX_FREQ," <<pm_config.max_freq_mhz << ";";
     }
     auto final = entries_stream.str();
  
@@ -83,6 +91,15 @@ void Main::run(void)
 
 void Main::setup(void)
 {
+    //setup cpu frequency
+    esp_pm_config_esp32_t pm_config = {
+        .max_freq_mhz = CPU_FREQUENCY,
+        .min_freq_mhz = CPU_FREQUENCY,
+        .light_sleep_enable = false
+    };
+    ESP_ERROR_CHECK( esp_pm_configure(&pm_config) );
+
+    //setup wifi
     esp_event_loop_create_default();
     nvs_flash_init();
     Wifi.SetCredentials("PYUR 6C93E", "BjJZ44b2B7hb");

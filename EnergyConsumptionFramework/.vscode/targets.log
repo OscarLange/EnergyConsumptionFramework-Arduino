@@ -25,7 +25,7 @@ make: *** No rule to make target 'check_python_dependencies', needed by 'all'.  
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 16 10:14:10 2022
+# Make data base, printed on Tue Jun 21 10:31:53 2022
 
 # Variables
 
@@ -64,7 +64,7 @@ CURDIR := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFra
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/98
+SNAP_DATA = /var/snap/code/99
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 150)
 EXTRA_COMPONENT_DIRS = 
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 25)
@@ -72,7 +72,7 @@ V = $(VERBOSE)
 # environment
 VSCODE_NLS_CONFIG = {"locale":"de","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:54985
+JOURNAL_STREAM = 8:60142
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 53)
@@ -108,11 +108,11 @@ COMPONENT_DIRS := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsum
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-_ = /snap/code/98/usr/share/code/code
+_ = /snap/code/99/usr/share/code/code
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 142)
 BUILD_DIR_BASE := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build
 # environment
-MANAGERPID = 2212
+MANAGERPID = 2216
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 72)
 DEFAULTS_ARG := 
 # environment
@@ -120,7 +120,7 @@ LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /home/oscar
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/98/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/99/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -130,14 +130,13 @@ LD = ld
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/oscar-X470-AORUS-ULTRA-GAMING:@/tmp/.ICE-unix/2430,unix/oscar-X470-AORUS-ULTRA-GAMING:/tmp/.ICE-unix/2430
+SESSION_MANAGER = local/oscar-X470-AORUS-ULTRA-GAMING:@/tmp/.ICE-unix/2434,unix/oscar-X470-AORUS-ULTRA-GAMING:/tmp/.ICE-unix/2434
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/oscar/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/98
- 
+SNAP = /snap/code/99
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 118)
 define RunMenuConf
 	mkdir -p $(BUILD_DIR_BASE)/include/config
@@ -152,7 +151,7 @@ IDF_VERSION_MINOR := 4
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 91)
 uniq = $(if $1,$(firstword $1) $(call uniq,$(filter-out $(firstword $1),$1)))
 # environment
-SNAP_VERSION = 4af164ea
+SNAP_VERSION = 30d9c6cd
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 216)
 TESTS_ALL = 
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 232)
@@ -166,9 +165,9 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 20f5a2116332497c87154c472624ba45
+INVOCATION_ID = c4b19ee725aa4cf2a16ca819ba915cb6
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/98/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/99/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 99)
 stripLeadingParentDirs = $(foreach path,$(1),$(if $(subst ..,,$(path)),$(if $(filter ../%,$(path)),$(call stripLeadingParentDirs,$(patsubst ../%,%,$(path))),$(path)),.))
 # default
@@ -185,7 +184,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4393
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4499
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 235)
 SIZE = size
 # automatic
@@ -213,7 +212,7 @@ PWD = /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramewo
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 27)
 SDKCONFIG_RENAME = $(IDF_PATH)/sdkconfig.rename
 # environment
-SSH_AGENT_PID = 2393
+SSH_AGENT_PID = 2399
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -231,7 +230,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/oscar/.config/Code/CachedData/4af164ea3a06f701fe3e89a2bcbb421d2026b68f
+VSCODE_CODE_CACHE_PATH = /home/oscar/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 LOGNAME = oscar
 # environment
@@ -273,7 +272,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/oscar/snap/code/98
+SNAP_USER_DATA = /home/oscar/snap/code/99
 # environment
 SHLVL = 0
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 230)
@@ -283,13 +282,13 @@ SINGLE_COMPONENT_DIRS :=
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7ccfc5f8-bdc5-42b0-a499-f369ef4c9572.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-568eb30c-cfd0-4178-861f-388a5bbf41ae.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = oscar
 # environment
-SNAP_REVISION = 98
+SNAP_REVISION = 99
 # makefile
 .DEFAULT_GOAL := all
 # environment
@@ -301,6 +300,7 @@ IDF_VERSION_MAJOR := 4
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 47)
 SEPARATOR := "*******************************************************************************"
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 205)
+ 
 COMPONENT_PATHS :=  /home/oscar/esp_vscode/esp-idf/components/app_trace  /home/oscar/esp_vscode/esp-idf/components/app_update  /home/oscar/esp_vscode/esp-idf/components/asio  /home/oscar/esp_vscode/esp-idf/components/bootloader  /home/oscar/esp_vscode/esp-idf/components/bootloader_support  /home/oscar/esp_vscode/esp-idf/components/bt  /home/oscar/esp_vscode/esp-idf/components/cbor  /home/oscar/esp_vscode/esp-idf/components/cmock  /home/oscar/esp_vscode/esp-idf/components/coap  /home/oscar/esp_vscode/esp-idf/components/console  /home/oscar/esp_vscode/esp-idf/components/cxx  /home/oscar/esp_vscode/esp-idf/components/driver  /home/oscar/esp_vscode/esp-idf/components/efuse  /home/oscar/esp_vscode/esp-idf/components/esp-tls  /home/oscar/esp_vscode/esp-idf/components/esp32  /home/oscar/esp_vscode/esp-idf/components/esp32c3  /home/oscar/esp_vscode/esp-idf/components/esp32h2  /home/oscar/esp_vscode/esp-idf/components/esp32s2  /home/oscar/esp_vscode/esp-idf/components/esp32s3  /home/oscar/esp_vscode/esp-idf/components/esp_adc_cal  /home/oscar/esp_vscode/esp-idf/components/esp_common  /home/oscar/esp_vscode/esp-idf/components/esp_eth  /home/oscar/esp_vscode/esp-idf/components/esp_event  /home/oscar/esp_vscode/esp-idf/components/esp_gdbstub  /home/oscar/esp_vscode/esp-idf/components/esp_hid  /home/oscar/esp_vscode/esp-idf/components/esp_http_client  /home/oscar/esp_vscode/esp-idf/components/esp_http_server  /home/oscar/esp_vscode/esp-idf/components/esp_https_ota  /home/oscar/esp_vscode/esp-idf/components/esp_https_server  /home/oscar/esp_vscode/esp-idf/components/esp_hw_support  /home/oscar/esp_vscode/esp-idf/components/esp_ipc  /home/oscar/esp_vscode/esp-idf/components/esp_lcd  /home/oscar/esp_vscode/esp-idf/components/esp_local_ctrl  /home/oscar/esp_vscode/esp-idf/components/esp_netif  /home/oscar/esp_vscode/esp-idf/components/esp_phy  /home/oscar/esp_vscode/esp-idf/components/esp_pm  /home/oscar/esp_vscode/esp-idf/components/esp_ringbuf  /home/oscar/esp_vscode/esp-idf/components/esp_rom  /home/oscar/esp_vscode/esp-idf/components/esp_serial_slave_link  /home/oscar/esp_vscode/esp-idf/components/esp_system  /home/oscar/esp_vscode/esp-idf/components/esp_timer  /home/oscar/esp_vscode/esp-idf/components/esp_websocket_client  /home/oscar/esp_vscode/esp-idf/components/esp_wifi  /home/oscar/esp_vscode/esp-idf/components/espcoredump  /home/oscar/esp_vscode/esp-idf/components/esptool_py  /home/oscar/esp_vscode/esp-idf/components/expat  /home/oscar/esp_vscode/esp-idf/components/fatfs  /home/oscar/esp_vscode/esp-idf/components/freemodbus  /home/oscar/esp_vscode/esp-idf/components/freertos  /home/oscar/esp_vscode/esp-idf/components/hal  /home/oscar/esp_vscode/esp-idf/components/heap  /home/oscar/esp_vscode/esp-idf/components/idf_test  /home/oscar/esp_vscode/esp-idf/components/jsmn  /home/oscar/esp_vscode/esp-idf/components/json  /home/oscar/esp_vscode/esp-idf/components/libsodium  /home/oscar/esp_vscode/esp-idf/components/log  /home/oscar/esp_vscode/esp-idf/components/lwip  /home/oscar/esp_vscode/esp-idf/components/mbedtls  /home/oscar/esp_vscode/esp-idf/components/mdns  /home/oscar/esp_vscode/esp-idf/components/mqtt  /home/oscar/esp_vscode/esp-idf/components/newlib  /home/oscar/esp_vscode/esp-idf/components/nghttp  /home/oscar/esp_vscode/esp-idf/components/nvs_flash  /home/oscar/esp_vscode/esp-idf/components/openssl  /home/oscar/esp_vscode/esp-idf/components/openthread  /home/oscar/esp_vscode/esp-idf/components/partition_table  /home/oscar/esp_vscode/esp-idf/components/perfmon  /home/oscar/esp_vscode/esp-idf/components/protobuf-c  /home/oscar/esp_vscode/esp-idf/components/protocomm  /home/oscar/esp_vscode/esp-idf/components/pthread  /home/oscar/esp_vscode/esp-idf/components/sdmmc  /home/oscar/esp_vscode/esp-idf/components/soc  /home/oscar/esp_vscode/esp-idf/components/spi_flash  /home/oscar/esp_vscode/esp-idf/components/spiffs  /home/oscar/esp_vscode/esp-idf/components/tcp_transport  /home/oscar/esp_vscode/esp-idf/components/tcpip_adapter  /home/oscar/esp_vscode/esp-idf/components/ulp  /home/oscar/esp_vscode/esp-idf/components/unity  /home/oscar/esp_vscode/esp-idf/components/vfs  /home/oscar/esp_vscode/esp-idf/components/wear_levelling  /home/oscar/esp_vscode/esp-idf/components/wifi_provisioning  /home/oscar/esp_vscode/esp-idf/components/wpa_supplicant  /home/oscar/esp_vscode/esp-idf/components/xtensa
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -313,7 +313,7 @@ MAKE_COMMAND := make
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 76)
 OS = 
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-b6f35f9c-1.68.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-b6f35f9c-1.68.1-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile
@@ -399,12 +399,11 @@ HOSTOBJCOPY := objcopy
 # environment
 LANG = C
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 8)
- 
 COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/kconfigs_projbuild.in
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 187)
 EXCLUDE_COMPONENTS = 
 # environment
-VSCODE_PID = 4574
+VSCODE_PID = 4557
 # makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 103)
 MENUCONFIG_STYLE = aquatic
 # variable set hash-table stats:
@@ -578,6 +577,7 @@ list-components:
 # Not a target:
 /home/oscar/esp_vscode/esp-idf/make/common.mk:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-06-08 16:33:08.788949835
 #  File has been updated.
 #  Successfully updated.
@@ -683,7 +683,6 @@ build:
 #  File has been updated.
 #  Successfully updated.
 
- 
 /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/include/config/auto.conf: /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/sdkconfig /home/oscar/esp_vscode/esp-idf/components/app_trace/Kconfig /home/oscar/esp_vscode/esp-idf/components/asio/Kconfig /home/oscar/esp_vscode/esp-idf/components/bt/Kconfig /home/oscar/esp_vscode/esp-idf/components/coap/Kconfig /home/oscar/esp_vscode/esp-idf/components/driver/Kconfig /home/oscar/esp_vscode/esp-idf/components/efuse/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp-tls/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32c3/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32h2/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32s2/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32s3/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_adc_cal/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_common/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_eth/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_event/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_gdbstub/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_http_client/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_http_server/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_https_ota/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_https_server/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_hw_support/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_ipc/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_lcd/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_netif/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_phy/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_pm/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_system/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_timer/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_wifi/Kconfig /home/oscar/esp_vscode/esp-idf/components/espcoredump/Kconfig /home/oscar/esp_vscode/esp-idf/components/fatfs/Kconfig /home/oscar/esp_vscode/esp-idf/components/freemodbus/Kconfig /home/oscar/esp_vscode/esp-idf/components/freertos/Kconfig /home/oscar/esp_vscode/esp-idf/components/hal/Kconfig /home/oscar/esp_vscode/esp-idf/components/heap/Kconfig /home/oscar/esp_vscode/esp-idf/components/jsmn/Kconfig /home/oscar/esp_vscode/esp-idf/components/libsodium/Kconfig /home/oscar/esp_vscode/esp-idf/components/log/Kconfig /home/oscar/esp_vscode/esp-idf/components/lwip/Kconfig /home/oscar/esp_vscode/esp-idf/components/mbedtls/Kconfig /home/oscar/esp_vscode/esp-idf/components/mdns/Kconfig /home/oscar/esp_vscode/esp-idf/components/mqtt/Kconfig /home/oscar/esp_vscode/esp-idf/components/newlib/Kconfig /home/oscar/esp_vscode/esp-idf/components/nvs_flash/Kconfig /home/oscar/esp_vscode/esp-idf/components/openssl/Kconfig /home/oscar/esp_vscode/esp-idf/components/openthread/Kconfig /home/oscar/esp_vscode/esp-idf/components/pthread/Kconfig /home/oscar/esp_vscode/esp-idf/components/spi_flash/Kconfig /home/oscar/esp_vscode/esp-idf/components/spiffs/Kconfig /home/oscar/esp_vscode/esp-idf/components/tcp_transport/Kconfig /home/oscar/esp_vscode/esp-idf/components/unity/Kconfig /home/oscar/esp_vscode/esp-idf/components/vfs/Kconfig /home/oscar/esp_vscode/esp-idf/components/wear_levelling/Kconfig /home/oscar/esp_vscode/esp-idf/components/wifi_provisioning/Kconfig /home/oscar/esp_vscode/esp-idf/components/wpa_supplicant/Kconfig /home/oscar/esp_vscode/esp-idf/components/app_update/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/bootloader/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/esp_rom/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/esptool_py/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/partition_table/Kconfig.projbuild | check_python_dependencies prepare_kconfig_files
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -852,6 +851,7 @@ help:
 #  Successfully updated.
 
 # Not a target:
+ 
 /home/oscar/esp_vscode/esp-idf/components/esp_event/Kconfig:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-08 16:32:54.576674355
@@ -963,7 +963,6 @@ term_check:
 # Not a target:
 /home/oscar/esp_vscode/esp-idf/components/spiffs/Kconfig:
 #  Implicit rule search has been done.
- 
 #  Last modified 2022-06-08 16:33:03.392845424
 #  File has been updated.
 #  Successfully updated.
@@ -984,7 +983,7 @@ clean:
 # Not a target:
 /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/sdkconfig:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-15 16:34:39.363040804
+#  Last modified 2022-06-20 21:25:59.606793628
 #  File has been updated.
 #  Successfully updated.
 
@@ -1139,6 +1138,7 @@ build-components:
 # Not a target:
 /home/oscar/esp_vscode/esp-idf/components/esp_phy/Kconfig:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-06-08 16:32:54.932681275
 #  File has been updated.
 #  Successfully updated.
@@ -1199,7 +1199,6 @@ size-components:
 # Not a target:
 /home/oscar/esp_vscode/esp-idf/components/app_update/Kconfig.projbuild:
 #  Implicit rule search has been done.
- 
 #  Last modified 2022-06-08 16:32:51.45261359
 #  File has been updated.
 #  Successfully updated.
@@ -1232,6 +1231,6 @@ size-components:
 # strcache performance: lookups = 303 / hit rate = 19%
 # hash-table stats:
 # Load=244/8192=3%, Rehash=0, Collisions=11/303=4%
-# Finished Make data base on Thu Jun 16 10:14:10 2022
+# Finished Make data base on Tue Jun 21 10:31:53 2022
 
  
