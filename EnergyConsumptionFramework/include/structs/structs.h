@@ -9,7 +9,7 @@
 //  40, 20, 10      <<< For 40MHz XTAL
 //  26, 13          <<< For 26MHz XTAL
 //  24, 12          <<< For 24MHz XTAL
-#define CPU_FREQUENCY 160
+#define CPU_FREQUENCY 80
 
 //VALUES
 //SPIN_WORK ADD_WORK

@@ -1,32 +1,33 @@
-# _Sample project_
+# Energy Consumption Framework
+This project contains everything needed on the esp32/client side.
+It sets up a wifi connection and a tcp client to interact with the server side:
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+https://github.com/OscarLange/EnergyConsumptionFramework-RasberryPi
 
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
+It contains a timed tcp call for the other device to start/stop collect the energy metrics.
+Also it collects system information on the running tasks.
+It also schedules the needed tasks for creating work.
 
-
-
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
-
-## Example folder contents
-
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
-
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
-
-Below is short explanation of remaining files in the project folder.
+## Folder contents
 
 ```
 ├── CMakeLists.txt
-├── main
+├── include
+│   ├── structs 
+│   │   └── structs.h           header file for regulating the work to be done
+│   ├── tcp 
+│   │   └── tcp.h               header file for tcp
+│   └── wifi 
+│       └── wifi.h              header file for wifi
+├── src
 │   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
+│   ├── main.cpp                main loop and setup
+│   ├── main.h                  main config file
+│   ├── work 
+│   │   └── work.c              work file where tasks are created and stats collected
+│   ├── tcp 
+│   │   └── tcp.cpp             tcp client implementation
+│   └── wifi 
+│       └── wifi.cpp            wifi implementation
+└── README.md                   This is the file you are currently reading
 ```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
