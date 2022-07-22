@@ -17,7 +17,8 @@ Diagnostic information:
     Python interpreter used: /usr/bin/python
     Warning: python interpreter not running from IDF_PYTHON_ENV_PATH
     PATH: /home/oscar/esp_vscode/esp-idf/tools:/home/oscar/.local/bin:/home/oscar/esp_vscode/esp-idf/tools:/home/oscar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-make: Leaving directory '/home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework'
  
 make: *** No rule to make target 'check_python_dependencies', needed by 'all'.
 
+make: Leaving directory '/home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework'
+ 

@@ -21,9 +21,11 @@
 
 static char task_name[configMAX_TASK_NAME_LEN] = "work_task";
 static SemaphoreHandle_t sync_spin_task;
-static SemaphoreHandle_t sync_spin_done;
-static SemaphoreHandle_t sync_done;
 
+/*
+* Wrapper function for uxTaskGetSystemState
+* Internal esp function to get info from task scheduler
+*/
 uint32_t get_real_time_stats(TaskStatus_t *array, UBaseType_t array_size)
 {
     uint32_t run_time;
@@ -42,20 +44,20 @@ uint32_t get_real_time_stats(TaskStatus_t *array, UBaseType_t array_size)
     return run_time;
 }
 
+/*
+* reorder and calculate run time statistics for tasks
+*/
 void calculate_real_time_stats(uint32_t start_run_time, TaskStatus_t *start_array, UBaseType_t start_array_size,
     uint32_t end_run_time, TaskStatus_t *end_array, UBaseType_t end_array_size, 
     struct TABLE_ENTRY entries[])
 {
-    printf("Start array size: %d, end array size %d", start_array_size, end_array_size);
     //Calculate total_elapsed_time in units of run time stats clock period.
     uint32_t total_elapsed_time = (end_run_time - start_run_time);
-    printf("Start run time: %d , end run time: %d", start_run_time, end_run_time);
     if (total_elapsed_time == 0) {
         printf("Total elapsed time does not make sense\n");
         return;
     }
 
-    printf("| Task | Run Time | Percentage\n");
     //Match each task in start_array to those in the end_array
     for (int i = 0; i < start_array_size; i++) {
         int k = -1;
@@ -71,8 +73,7 @@ void calculate_real_time_stats(uint32_t start_run_time, TaskStatus_t *start_arra
         //Check if matching task found
         if (k >= 0) {
             uint32_t task_elapsed_time = end_array[k].ulRunTimeCounter - start_array[i].ulRunTimeCounter;
-            uint32_t percentage_time = (task_elapsed_time * 100UL) / (total_elapsed_time * portNUM_PROCESSORS);
-            printf("| %s | %d | %d%%\n", start_array[i].pcTaskName, task_elapsed_time, percentage_time);
+            uint32_t percentage_time = (task_elapsed_time * 100UL) / (total_elapsed_time);
 
             //create entry in struct
             memcpy(entries[i].task_name, start_array[i].pcTaskName, configMAX_TASK_NAME_LEN * sizeof(char));
@@ -89,47 +90,182 @@ void calculate_real_time_stats(uint32_t start_run_time, TaskStatus_t *start_arra
 static void spin_task(void *arg)
 {
     volatile int a,b = 30000;
+    volatile float f_a, f_b = 30000.300;
     volatile int c = 0;
+    volatile float f_c;
     //wait for sync start
     xSemaphoreTake(sync_spin_task, portMAX_DELAY);
-    //cycle until given semaphore
     while(true)
     {
-        if(xSemaphoreTake(sync_spin_done, pdMS_TO_TICKS(100)) == pdTRUE){
-            break;
-        }
-
-        #ifdef SPIN_WORK
         //Consume CPU cycles
         for (int i = 0; i < SPIN_ITER; i++) {
             __asm__ __volatile__("NOP");
         }
-        #endif
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
 
-        #ifdef ADD_WORK
+static void add_task(void *arg)
+{
+    volatile int a,b = 30000;
+    volatile int c = 0;
+    //wait for sync start
+    xSemaphoreTake(sync_spin_task, portMAX_DELAY);
+    while(true)
+    {
         for (int i = 0; i < SPIN_ITER; i++) {
             c = a + b;
         }
-        #endif
+        vTaskDelay(pdMS_TO_TICKS(50));
     }
-    //terminate task
-    vTaskDelay(pdMS_TO_TICKS(100));
-    xSemaphoreGive(sync_done);
-    vTaskDelete(NULL);
 }
 
-void collect_stats(struct TABLE_ENTRY entries[])
+static void sub_task(void *arg)
 {
+    volatile int a,b = 30000;
+    volatile int c = 0;
+    //wait for sync start
+    xSemaphoreTake(sync_spin_task, portMAX_DELAY);
+    while(true)
+    {
+        for (int i = 0; i < SPIN_ITER; i++) {
+            c = a - b;
+        }
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+static void mul_task(void *arg)
+{
+    volatile int a,b = 30000;
+    volatile int c = 0;
+    //wait for sync start
+    xSemaphoreTake(sync_spin_task, portMAX_DELAY);
+    while(true)
+    {
+        for (int i = 0; i < SPIN_ITER; i++) {
+            c = a * b;
+        }
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+static void div_task(void *arg)
+{
+    volatile int a,b = 30000;
+    volatile int c = 0;
+    //wait for sync start
+    xSemaphoreTake(sync_spin_task, portMAX_DELAY);
+    while(true)
+    {
+        for (int i = 0; i < SPIN_ITER; i++) {
+            c = a / b;
+        }
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+static void addf_task(void *arg)
+{
+    volatile float f_a, f_b = 30000.300;
+    volatile float f_c;
+    //wait for sync start
+    xSemaphoreTake(sync_spin_task, portMAX_DELAY);
+    while(true)
+    {
+        for (int i = 0; i < SPIN_ITER; i++) {
+            f_c = f_a + f_b;
+        }
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+static void subf_task(void *arg)
+{
+    volatile float f_a, f_b = 30000.300;
+    volatile float f_c;
+    //wait for sync start
+    xSemaphoreTake(sync_spin_task, portMAX_DELAY);
+    while(true)
+    {
+        for (int i = 0; i < SPIN_ITER; i++) {
+            f_c = f_a - f_b;
+        }
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+static void mulf_task(void *arg)
+{
+    volatile float f_a, f_b = 30000.300;
+    volatile float f_c;
+    //wait for sync start
+    xSemaphoreTake(sync_spin_task, portMAX_DELAY);
+    while(true)
+    {
+        for (int i = 0; i < SPIN_ITER; i++) {
+            f_c = f_a * f_b;
+        }
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+static void divf_task(void *arg)
+{
+    volatile float f_a, f_b = 30000.300;
+    volatile float f_c;
+    //wait for sync start
+    xSemaphoreTake(sync_spin_task, portMAX_DELAY);
+    while(true)
+    {
+        for (int i = 0; i < SPIN_ITER; i++) {
+            f_c = f_a / f_b;
+        }
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+void collect_stats(struct TABLE_ENTRY entries[], int work_mode, int cpu_util)
+{
+    //cpu util 0-100
+    int work_time = (RUN_TIME / 100) * cpu_util;
+    int suspended_time = RUN_TIME - work_time;
+
     //Allow other core to finish initialization
     vTaskDelay(pdMS_TO_TICKS(100));
+    xTaskHandle work_handle;
 
     //Create semaphores to synchronize
     sync_spin_task = xSemaphoreCreateBinary();
-    sync_spin_done = xSemaphoreCreateBinary();
-    sync_done = xSemaphoreCreateBinary();
 
-    printf("Task created %s", task_name);
-    xTaskCreatePinnedToCore(spin_task, task_name, 1024, NULL, SPIN_TASK_PRIO, NULL, tskNO_AFFINITY);
+    if(work_mode == 0)
+    {
+        xTaskCreatePinnedToCore(spin_task, task_name, 1024, NULL, SPIN_TASK_PRIO, &work_handle, 1);
+    } else if(work_mode == 1)
+    {
+        xTaskCreatePinnedToCore(add_task, task_name, 1024, NULL, SPIN_TASK_PRIO, &work_handle, 1);
+    } else if(work_mode == 2)
+    {
+        xTaskCreatePinnedToCore(sub_task, task_name, 1024, NULL, SPIN_TASK_PRIO, &work_handle, 1);
+    } else if(work_mode == 3)
+    {
+        xTaskCreatePinnedToCore(mul_task, task_name, 1024, NULL, SPIN_TASK_PRIO, &work_handle, 1);
+    } else if(work_mode == 4)
+    {
+        xTaskCreatePinnedToCore(div_task, task_name, 1024, NULL, SPIN_TASK_PRIO, &work_handle, 1);
+    }else if(work_mode == 5)
+    {
+        xTaskCreatePinnedToCore(addf_task, task_name, 1024, NULL, SPIN_TASK_PRIO, &work_handle, 1);
+    } else if(work_mode == 6)
+    {
+        xTaskCreatePinnedToCore(subf_task, task_name, 1024, NULL, SPIN_TASK_PRIO, &work_handle, 1);
+    } else if(work_mode == 7)
+    {
+        xTaskCreatePinnedToCore(mulf_task, task_name, 1024, NULL, SPIN_TASK_PRIO, &work_handle, 1);
+    } else
+    {
+        xTaskCreatePinnedToCore(divf_task, task_name, 1024, NULL, SPIN_TASK_PRIO, &work_handle, 1);
+    }
 
     //allocate stats values
     TaskStatus_t *start_array = NULL, *end_array = NULL;
@@ -152,8 +288,17 @@ void collect_stats(struct TABLE_ENTRY entries[])
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 
+    //the following part is to achieve different cpu utilizations
     //actuall work time for other processor/task
-    vTaskDelay(pdMS_TO_TICKS(10000));
+    vTaskDelay(pdMS_TO_TICKS(work_time/2));
+    vTaskSuspend( work_handle );
+
+    //suspended time
+    vTaskDelay(pdMS_TO_TICKS(suspended_time));
+
+    //second work time
+    vTaskResume( work_handle );
+    vTaskDelay(pdMS_TO_TICKS(work_time/2));
 
     //Allocate array to store current task states
     end_array_size = uxTaskGetNumberOfTasks() + ARRAY_SIZE_OFFSET;
@@ -170,10 +315,6 @@ void collect_stats(struct TABLE_ENTRY entries[])
     //calculate the real_time_stats
     calculate_real_time_stats(start_run_time, start_array, start_array_size, end_run_time, end_array, end_array_size, entries);
 
-    printf("Entry 0: %s", entries[0].task_name);
-
-    //wait for all spin tasks to be done
-    xSemaphoreGive(sync_spin_done);
-    //wait for ack
-    xSemaphoreTake(sync_done, portMAX_DELAY);
+    //stop the working task to be done
+    vTaskDelete(work_handle);
 }

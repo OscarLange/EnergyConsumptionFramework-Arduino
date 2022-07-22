@@ -24,10 +24,12 @@ namespace EnergyConsumptionFramework
             };
 
         private:
+            //start wifi
             static esp_err_t _init();
             static wifi_init_config_t _wifi_init_cfg;
             static wifi_config_t _wifi_cfg;
 
+            //event handlers for change in wifi status
             static void wifi_event_handler(void *arg, esp_event_base_t event_base,
                                        int32_t event_id, void *event_data);
             static void ip_event_handler(void *arg, esp_event_base_t event_base,

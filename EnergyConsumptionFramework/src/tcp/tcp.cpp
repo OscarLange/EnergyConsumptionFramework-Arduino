@@ -11,7 +11,8 @@ namespace EnergyConsumptionFramework {
 
     }
 
-    void TCPClient::tcp_client_task(char *payload) {
+    //Send msg via tcp and wait for acknowledge
+    void TCPClient::tcp_client_task(char *payload, bool get_info, bool get_work) {
         char rx_buffer[128];
 
         struct sockaddr_in dest_addr;
@@ -40,6 +41,7 @@ namespace EnergyConsumptionFramework {
             return;
         }
 
+        std::cout << "Waiting on recv msg\n";
         int len =  recv(sock, rx_buffer, sizeof(rx_buffer) - 1, 0);
 
         if(send_err < 0) {
@@ -49,6 +51,37 @@ namespace EnergyConsumptionFramework {
         else {
             rx_buffer[len] = 0;
             std::cout << "Msg: " << rx_buffer << "\n";
+            std::string config(rx_buffer);
+            if(get_info)
+            {
+                //Set work and frequency
+                //TODO switch work with light sleep mode
+                std::string work = config.substr(0, config.find(","));
+                this->work = work;
+                std::string freq = config.substr(config.find(",")+1, config.find(";") - config.find(",") - 1);
+                this->freq = std::stoi(freq);
+            } else if(get_work)
+            {
+                //set work and utilization
+                std::string work = config.substr(0, config.find(","));
+                this->work_mode = std::stoi(work);
+                std::string cpu_util = config.substr(config.find(",")+1, config.find(";") - config.find(",") - 1);
+                this->cpu_util = std::stoi(cpu_util);
+            } else {
+                //setup potential switch in config
+                std::string ack("Acknowledged");
+                if (config.find(ack) == std::string::npos) {
+                    std::string freq_switch("Freq Switch");
+                    std::string config_switch("Config Switch");
+                    if(config.find(freq_switch) != std::string::npos)
+                    {
+                        this->mode = 2;
+                    } else if(config.find(config_switch) != std::string::npos)
+                    {
+                        this->mode = 1;
+                    }
+                } 
+            }
         }
 
         if (sock != -1) {
