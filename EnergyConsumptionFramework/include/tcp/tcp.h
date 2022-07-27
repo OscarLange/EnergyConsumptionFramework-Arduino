@@ -14,7 +14,7 @@
 
 namespace EnergyConsumptionFramework
 {
-    #define host_ip "192.168.0.5"
+    #define host_ip "192.168.0.3"
     #define host_port 8090
 
 

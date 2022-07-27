@@ -1,20 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-The following Python requirements are not satisfied:
-pyparsing>=2.0.3,<2.4.0
-idf-component-manager~=1.0
-gdbgui==0.13.2.0
-pygdbmi<=0.9.0.2
-python-socketio<5
-jinja2<3.1  # See https://github.com/espressif/esp-idf/issues/8760
-itsdangerous<2.1
-kconfiglib==13.7.1
-construct==2.10.54
-To install the missing packages, please run "/home/oscar/esp_vscode/esp-idf/install.sh"
-Diagnostic information:
-    IDF_PYTHON_ENV_PATH: /usr/bin/python3
-    Python interpreter used: /usr/bin/python
-    Warning: python interpreter not running from IDF_PYTHON_ENV_PATH
-    PATH: /home/oscar/esp_vscode/esp-idf/tools:/home/oscar/.local/bin:/home/oscar/esp_vscode/esp-idf/tools:/home/oscar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -22,7 +6,7 @@ Diagnostic information:
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 22 14:31:37 2022
+# Make data base, printed on Mon Jul 25 09:55:02 2022
 
 # Variables
 
@@ -56,58 +40,40 @@ GDMSESSION = ubuntu
 XMODIFIERS = @im=ibus
 # makefile
 CURDIR := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework
-# makefile
+# makefile (from 'Makefile', line 39)
 SHELL = /bin/sh
+# makefile (from 'Makefile', line 45)
+RM = /usr/bin/cmake -E remove -f
 # environment
 SNAP_DATA = /var/snap/code/102
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 150)
-EXTRA_COMPONENT_DIRS = 
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 25)
-V = $(VERBOSE)
 # environment
 VSCODE_NLS_CONFIG = {"locale":"de","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:70384
+JOURNAL_STREAM = 8:74154
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 53)
-NON_INTERACTIVE_TARGET = defconfig clean% %clean help list-components print_flash_cmd check_python_dependencies
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 227)
-TEST_COMPONENT_NAMES := 
 # environment
 SNAP_INSTANCE_NAME = code
 # environment
 SNAP_ARCH = amd64
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 1)
-MAKEFILE_LIST :=  Makefile /home/oscar/esp_vscode/esp-idf/make/project.mk /home/oscar/esp_vscode/esp-idf/make/common.mk /home/oscar/esp_vscode/esp-idf/make/version.mk /home/oscar/esp_vscode/esp-idf/make/project_config.mk
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 11)
-SDKCONFIG_MAKEFILE = $(abspath $(BUILD_DIR_BASE)/include/config/auto.conf)
+# makefile (from 'Makefile', line 54)
+CMAKE_BINARY_DIR = /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
 # automatic
 @F = $(notdir $@)
 # environment
 GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
 USERNAME = oscar
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 238)
-HOSTCC := gcc
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/version.mk', line 3)
-IDF_VERSION_PATCH := 1
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 239)
-HOSTLD := ld
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 155)
-COMPONENT_DIRS := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/components /home/oscar/esp_vscode/esp-idf/components /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/main
 # environment
 _ = /snap/code/102/usr/share/code/code
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 142)
-BUILD_DIR_BASE := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build
 # environment
-MANAGERPID = 4533
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 72)
-DEFAULTS_ARG := 
+MANAGERPID = 5535
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -118,37 +84,18 @@ GSETTINGS_SCHEMA_DIR = /snap/code/102/usr/share/glib-2.0/schemas
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
 PATH = /home/oscar/esp_vscode/esp-idf/tools:/home/oscar/.local/bin:/home/oscar/esp_vscode/esp-idf/tools:/home/oscar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 231)
-LD = ld
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/oscar-X470-AORUS-ULTRA-GAMING:@/tmp/.ICE-unix/4758,unix/oscar-X470-AORUS-ULTRA-GAMING:/tmp/.ICE-unix/4758
+SESSION_MANAGER = local/oscar-X470-AORUS-ULTRA-GAMING:@/tmp/.ICE-unix/5754,unix/oscar-X470-AORUS-ULTRA-GAMING:/tmp/.ICE-unix/5754
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/oscar/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
 SNAP = /snap/code/102
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 118)
-define RunMenuConf
-	mkdir -p $(BUILD_DIR_BASE)/include/config
-	cd $(BUILD_DIR_BASE); KCONFIG_AUTOHEADER=$(abspath $(BUILD_DIR_BASE)/include/sdkconfig.h) KCONFIG_CONFIG=$(SDKCONFIG) COMPONENT_KCONFIGS_SOURCE_FILE="$(COMPONENT_KCONFIGS_SOURCE_FILE)" COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE="$(COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE)" IDF_CMAKE=n IDF_ENV_FPGA=n $(MENUCONFIG_CMD) $(IDF_PATH)/Kconfig
-endef
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 30)
-summary := @echo
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 50)
-dequote = $(subst ",,$(1))
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/version.mk', line 2)
-IDF_VERSION_MINOR := 4
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 91)
-uniq = $(if $1,$(firstword $1) $(call uniq,$(filter-out $(firstword $1),$1)))
 # environment
 SNAP_VERSION = 3b889b09
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 216)
-TESTS_ALL = 
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 232)
-AR = ar
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -156,60 +103,35 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 03f6478261e948248578709e0d4a9549
+INVOCATION_ID = ed0aa5b5f58e482eb1d0b4512d7ba2e4
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/102/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 99)
-stripLeadingParentDirs = $(foreach path,$(1),$(if $(subst ..,,$(path)),$(if $(filter ../%,$(path)),$(call stripLeadingParentDirs,$(patsubst ../%,%,$(path))),$(path)),.))
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 LS_COLORS = 
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 83)
-define RunConfGen
-	mkdir -p $(BUILD_DIR_BASE)/include/config
-	$(PYTHON) $(IDF_PATH)/tools/kconfig_new/confgen.py --kconfig $(IDF_PATH)/Kconfig --config $(SDKCONFIG) --sdkconfig-rename $(SDKCONFIG_RENAME) --env "COMPONENT_KCONFIGS=$(strip $(COMPONENT_KCONFIGS))" --env "COMPONENT_KCONFIGS_PROJBUILD=$(strip $(COMPONENT_KCONFIGS_PROJBUILD))" --env "COMPONENT_KCONFIGS_SOURCE_FILE=$(COMPONENT_KCONFIGS_SOURCE_FILE)" --env "COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=$(COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE)" --env "COMPONENT_SDKCONFIG_RENAMES=$(strip $(COMPONENT_SDKCONFIG_RENAMES))" --env "IDF_CMAKE=n" --env "IDF_ENV_FPGA=n" $(DEFAULTS_ARG) --output config ${SDKCONFIG} --output makefile $(SDKCONFIG_MAKEFILE) --output header $(BUILD_DIR_BASE)/include/sdkconfig.h $1
-endef
 # environment
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 16728
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 235)
-SIZE = size
+GIO_LAUNCHED_DESKTOP_FILE_PID = 40782
 # automatic
 %F = $(notdir $%)
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 5)
-COMPONENT_KCONFIGS_PROJBUILD :=  /home/oscar/esp_vscode/esp-idf/components/app_update/Kconfig.projbuild  /home/oscar/esp_vscode/esp-idf/components/bootloader/Kconfig.projbuild                                  /home/oscar/esp_vscode/esp-idf/components/esp_rom/Kconfig.projbuild       /home/oscar/esp_vscode/esp-idf/components/esptool_py/Kconfig.projbuild                     /home/oscar/esp_vscode/esp-idf/components/partition_table/Kconfig.projbuild                 
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 31)
-details := @true
 # environment
 DISPLAY = :1
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 215)
-TEST_EXCLUDE_COMPONENTS = 
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 21)
-KCONFIG_TOOL_DIR = $(IDF_PATH)/tools/kconfig
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 240)
-HOSTAR := ar
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
 PWD = /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework
 # default
 .LOADED := 
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 27)
-SDKCONFIG_RENAME = $(IDF_PATH)/sdkconfig.rename
 # environment
-SSH_AGENT_PID = 4716
+SSH_AGENT_PID = 5717
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
 GTK_MODULES = gail:atk-bridge
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 61)
-PYTHON = python
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 183)
-COMPONENTS := app_trace app_update asio bootloader bootloader_support bt cbor cmock coap console cxx driver efuse esp-tls esp32 esp32c3 esp32h2 esp32s2 esp32s3 esp_adc_cal esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_ipc esp_lcd esp_local_ctrl esp_netif esp_phy esp_pm esp_ringbuf esp_rom esp_serial_slave_link esp_system esp_timer esp_websocket_client esp_wifi espcoredump esptool_py expat fatfs freemodbus freertos hal heap idf_test jsmn json libsodium log lwip mbedtls mdns mqtt newlib nghttp nvs_flash openssl openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport tcpip_adapter ulp unity vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -224,16 +146,14 @@ VSCODE_CODE_CACHE_PATH = /home/oscar/.config/Code/CachedData/3b889b090b5ad5793f5
 LOGNAME = oscar
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# makefile (from 'Makefile', line 48)
+EQUALS = =
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # environment
 SNAP_CONTEXT = LCYYL1P7dX2zK2LsD-XQ8oTkr4K3SRLIizkczsDn7r9bBEy8stEc
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 108)
-MENUCONFIG_CMD := python -m menuconfig
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 7)
-COMPONENT_KCONFIGS_SOURCE_FILE := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/kconfigs.in
 # environment
 SNAP_USER_COMMON = /home/oscar/snap/code/common
 # environment
@@ -242,18 +162,10 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 223)
-TEST_COMPONENTS_LIST := 
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 124)
-PROJECT_PATH := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework
 # environment
 MAKELEVEL := 0
 # environment
 SNAP_REAL_HOME = /home/oscar
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 24)
-VERBOSE = 
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 168)
-MULTI_COMPONENT_DIRS := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/components /home/oscar/esp_vscode/esp-idf/components /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/main
 # default
 MAKE = $(MAKE_COMMAND)
 # default
@@ -264,10 +176,6 @@ QT_IM_MODULE = ibus
 SNAP_USER_DATA = /home/oscar/snap/code/102
 # environment
 SHLVL = 0
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 230)
-CC = gcc
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 164)
-SINGLE_COMPONENT_DIRS := 
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # default
@@ -277,20 +185,11 @@ USER = oscar
 # environment
 SNAP_REVISION = 102
 # makefile
-.DEFAULT_GOAL := all
+.DEFAULT_GOAL := default_target
 # environment
 XDG_CURRENT_DESKTOP = Unity
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 83)
-prereq_if_explicit = $(filter $(1),$(MAKECMDGOALS))
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/version.mk', line 1)
-IDF_VERSION_MAJOR := 4
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 47)
-SEPARATOR := "*******************************************************************************"
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 205)
- 
-make: *** No rule to make target 'check_python_dependencies', needed by 'all'.  Stop.
-
-COMPONENT_PATHS :=  /home/oscar/esp_vscode/esp-idf/components/app_trace  /home/oscar/esp_vscode/esp-idf/components/app_update  /home/oscar/esp_vscode/esp-idf/components/asio  /home/oscar/esp_vscode/esp-idf/components/bootloader  /home/oscar/esp_vscode/esp-idf/components/bootloader_support  /home/oscar/esp_vscode/esp-idf/components/bt  /home/oscar/esp_vscode/esp-idf/components/cbor  /home/oscar/esp_vscode/esp-idf/components/cmock  /home/oscar/esp_vscode/esp-idf/components/coap  /home/oscar/esp_vscode/esp-idf/components/console  /home/oscar/esp_vscode/esp-idf/components/cxx  /home/oscar/esp_vscode/esp-idf/components/driver  /home/oscar/esp_vscode/esp-idf/components/efuse  /home/oscar/esp_vscode/esp-idf/components/esp-tls  /home/oscar/esp_vscode/esp-idf/components/esp32  /home/oscar/esp_vscode/esp-idf/components/esp32c3  /home/oscar/esp_vscode/esp-idf/components/esp32h2  /home/oscar/esp_vscode/esp-idf/components/esp32s2  /home/oscar/esp_vscode/esp-idf/components/esp32s3  /home/oscar/esp_vscode/esp-idf/components/esp_adc_cal  /home/oscar/esp_vscode/esp-idf/components/esp_common  /home/oscar/esp_vscode/esp-idf/components/esp_eth  /home/oscar/esp_vscode/esp-idf/components/esp_event  /home/oscar/esp_vscode/esp-idf/components/esp_gdbstub  /home/oscar/esp_vscode/esp-idf/components/esp_hid  /home/oscar/esp_vscode/esp-idf/components/esp_http_client  /home/oscar/esp_vscode/esp-idf/components/esp_http_server  /home/oscar/esp_vscode/esp-idf/components/esp_https_ota  /home/oscar/esp_vscode/esp-idf/components/esp_https_server  /home/oscar/esp_vscode/esp-idf/components/esp_hw_support  /home/oscar/esp_vscode/esp-idf/components/esp_ipc  /home/oscar/esp_vscode/esp-idf/components/esp_lcd  /home/oscar/esp_vscode/esp-idf/components/esp_local_ctrl  /home/oscar/esp_vscode/esp-idf/components/esp_netif  /home/oscar/esp_vscode/esp-idf/components/esp_phy  /home/oscar/esp_vscode/esp-idf/components/esp_pm  /home/oscar/esp_vscode/esp-idf/components/esp_ringbuf  /home/oscar/esp_vscode/esp-idf/components/esp_rom  /home/oscar/esp_vscode/esp-idf/components/esp_serial_slave_link  /home/oscar/esp_vscode/esp-idf/components/esp_system  /home/oscar/esp_vscode/esp-idf/components/esp_timer  /home/oscar/esp_vscode/esp-idf/components/esp_websocket_client  /home/oscar/esp_vscode/esp-idf/components/esp_wifi  /home/oscar/esp_vscode/esp-idf/components/espcoredump  /home/oscar/esp_vscode/esp-idf/components/esptool_py  /home/oscar/esp_vscode/esp-idf/components/expat  /home/oscar/esp_vscode/esp-idf/components/fatfs  /home/oscar/esp_vscode/esp-idf/components/freemodbus  /home/oscar/esp_vscode/esp-idf/components/freertos  /home/oscar/esp_vscode/esp-idf/components/hal  /home/oscar/esp_vscode/esp-idf/components/heap  /home/oscar/esp_vscode/esp-idf/components/idf_test  /home/oscar/esp_vscode/esp-idf/components/jsmn  /home/oscar/esp_vscode/esp-idf/components/json  /home/oscar/esp_vscode/esp-idf/components/libsodium  /home/oscar/esp_vscode/esp-idf/components/log  /home/oscar/esp_vscode/esp-idf/components/lwip  /home/oscar/esp_vscode/esp-idf/components/mbedtls  /home/oscar/esp_vscode/esp-idf/components/mdns  /home/oscar/esp_vscode/esp-idf/components/mqtt  /home/oscar/esp_vscode/esp-idf/components/newlib  /home/oscar/esp_vscode/esp-idf/components/nghttp  /home/oscar/esp_vscode/esp-idf/components/nvs_flash  /home/oscar/esp_vscode/esp-idf/components/openssl  /home/oscar/esp_vscode/esp-idf/components/openthread  /home/oscar/esp_vscode/esp-idf/components/partition_table  /home/oscar/esp_vscode/esp-idf/components/perfmon  /home/oscar/esp_vscode/esp-idf/components/protobuf-c  /home/oscar/esp_vscode/esp-idf/components/protocomm  /home/oscar/esp_vscode/esp-idf/components/pthread  /home/oscar/esp_vscode/esp-idf/components/sdmmc  /home/oscar/esp_vscode/esp-idf/components/soc  /home/oscar/esp_vscode/esp-idf/components/spi_flash  /home/oscar/esp_vscode/esp-idf/components/spiffs  /home/oscar/esp_vscode/esp-idf/components/tcp_transport  /home/oscar/esp_vscode/esp-idf/components/tcpip_adapter  /home/oscar/esp_vscode/esp-idf/components/ulp  /home/oscar/esp_vscode/esp-idf/components/unity  /home/oscar/esp_vscode/esp-idf/components/vfs  /home/oscar/esp_vscode/esp-idf/components/wear_levelling  /home/oscar/esp_vscode/esp-idf/components/wifi_provisioning  /home/oscar/esp_vscode/esp-idf/components/wpa_supplicant  /home/oscar/esp_vscode/esp-idf/components/xtensa
+# makefile (from 'Makefile', line 51)
+CMAKE_SOURCE_DIR = /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -299,8 +198,6 @@ MAKE_COMMAND := make
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 76)
-OS = 
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-b6f35f9c-1.69.2-main.sock
 # environment
@@ -311,24 +208,14 @@ MAKEFLAGS = pqrRs
 MFLAGS = -pqrRs
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/common.mk', line 69)
-resolvepath = $(abspath $(foreach dir,$(1),$(if $(filter /%,$(dir)),$(dir),$(subst //,/,$(2)/$(dir)))))
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 89)
-IDF_PATH := /home/oscar/esp_vscode/esp-idf
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 6)
-COMPONENT_SDKCONFIG_RENAMES := /home/oscar/esp_vscode/esp-idf/components/app_trace/sdkconfig.rename   /home/oscar/esp_vscode/esp-idf/components/bootloader/sdkconfig.rename  /home/oscar/esp_vscode/esp-idf/components/bt/sdkconfig.rename      /home/oscar/esp_vscode/esp-idf/components/driver/sdkconfig.rename   /home/oscar/esp_vscode/esp-idf/components/esp32/sdkconfig.rename        /home/oscar/esp_vscode/esp-idf/components/esp_event/sdkconfig.rename /home/oscar/esp_vscode/esp-idf/components/esp_gdbstub/sdkconfig.rename      /home/oscar/esp_vscode/esp-idf/components/esp_hw_support/sdkconfig.rename     /home/oscar/esp_vscode/esp-idf/components/esp_phy/sdkconfig.rename /home/oscar/esp_vscode/esp-idf/components/esp_pm/sdkconfig.rename    /home/oscar/esp_vscode/esp-idf/components/esp_system/sdkconfig.rename /home/oscar/esp_vscode/esp-idf/components/esp_timer/sdkconfig.rename  /home/oscar/esp_vscode/esp-idf/components/esp_wifi/sdkconfig.rename /home/oscar/esp_vscode/esp-idf/components/espcoredump/sdkconfig.rename /home/oscar/esp_vscode/esp-idf/components/esptool_py/sdkconfig.rename   /home/oscar/esp_vscode/esp-idf/components/freemodbus/sdkconfig.rename /home/oscar/esp_vscode/esp-idf/components/freertos/sdkconfig.rename        /home/oscar/esp_vscode/esp-idf/components/lwip/sdkconfig.rename             /home/oscar/esp_vscode/esp-idf/components/pthread/sdkconfig.rename   /home/oscar/esp_vscode/esp-idf/components/spi_flash/sdkconfig.rename      /home/oscar/esp_vscode/esp-idf/components/vfs/sdkconfig.rename    
+# environment
+IDF_PATH = /home/oscar/esp_vscode/esp-idf
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 234)
-OBJDUMP = objdump
 # environment
 GDK_BACKEND = x11
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 66)
-SDKCONFIG_DEFAULTS_FILES := $(subst ,, )
 # automatic
 +F = $(notdir $+)
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 86)
-SANITISED_IDF_PATH := /home/oscar/esp_vscode/esp-idf
 # environment
 QT_ACCESSIBILITY = 1
 # default
@@ -337,66 +224,38 @@ MAKEFILES :=
 SNAP_COOKIE = LCYYL1P7dX2zK2LsD-XQ8oTkr4K3SRLIizkczsDn7r9bBEy8stEc
 # automatic
 <F = $(notdir $<)
-# makefile (from 'Makefile', line 6)
-PROJECT_NAME := sample_project
 # environment
 SNAP_NAME = code
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 226)
-TEST_COMPONENT_PATHS := 
 # environment
 LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# makefile (from 'Makefile', line 42)
+CMAKE_COMMAND = /usr/bin/cmake
 # automatic
 ^F = $(notdir $^)
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 118)
-MAKEFLAGS_OLD := pqrR
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 233)
-OBJCOPY = objcopy
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 31)
-SDKCONFIG_DEFAULTS = $(PROJECT_PATH)/sdkconfig.defaults
-# default
-SUFFIXES := 
+# makefile (from 'Makefile', line 21)
+SUFFIXES = 
 # environment
 SNAP_REEXEC = 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 129)
-COMMON_MAKEFILES := /home/oscar/esp_vscode/esp-idf/make/project.mk /home/oscar/esp_vscode/esp-idf/make/common.mk /home/oscar/esp_vscode/esp-idf/make/version.mk /home/oscar/esp_vscode/esp-idf/make/component_wrapper.mk /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/Makefile
 # environment
 WINDOWPATH = 2
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 100)
-IDF_TARGET := esp32
 # environment
 IDF_PYTHON_ENV_PATH = /usr/bin/python3
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
 GJS_DEBUG_OUTPUT = stderr
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 214)
-TEST_COMPONENTS = 
 # default
 .RECIPEPREFIX := 
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 242)
-HOSTSIZE := size
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 25)
-SDKCONFIG = $(PROJECT_PATH)/sdkconfig
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 4)
-COMPONENT_KCONFIGS := /home/oscar/esp_vscode/esp-idf/components/app_trace/Kconfig  /home/oscar/esp_vscode/esp-idf/components/asio/Kconfig   /home/oscar/esp_vscode/esp-idf/components/bt/Kconfig   /home/oscar/esp_vscode/esp-idf/components/coap/Kconfig   /home/oscar/esp_vscode/esp-idf/components/driver/Kconfig /home/oscar/esp_vscode/esp-idf/components/efuse/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp-tls/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32c3/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32h2/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32s2/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32s3/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_adc_cal/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_common/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_eth/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_event/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_gdbstub/Kconfig  /home/oscar/esp_vscode/esp-idf/components/esp_http_client/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_http_server/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_https_ota/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_https_server/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_hw_support/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_ipc/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_lcd/Kconfig  /home/oscar/esp_vscode/esp-idf/components/esp_netif/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_phy/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_pm/Kconfig    /home/oscar/esp_vscode/esp-idf/components/esp_system/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_timer/Kconfig  /home/oscar/esp_vscode/esp-idf/components/esp_wifi/Kconfig /home/oscar/esp_vscode/esp-idf/components/espcoredump/Kconfig   /home/oscar/esp_vscode/esp-idf/components/fatfs/Kconfig /home/oscar/esp_vscode/esp-idf/components/freemodbus/Kconfig /home/oscar/esp_vscode/esp-idf/components/freertos/Kconfig /home/oscar/esp_vscode/esp-idf/components/hal/Kconfig /home/oscar/esp_vscode/esp-idf/components/heap/Kconfig  /home/oscar/esp_vscode/esp-idf/components/jsmn/Kconfig  /home/oscar/esp_vscode/esp-idf/components/libsodium/Kconfig /home/oscar/esp_vscode/esp-idf/components/log/Kconfig /home/oscar/esp_vscode/esp-idf/components/lwip/Kconfig /home/oscar/esp_vscode/esp-idf/components/mbedtls/Kconfig /home/oscar/esp_vscode/esp-idf/components/mdns/Kconfig /home/oscar/esp_vscode/esp-idf/components/mqtt/Kconfig /home/oscar/esp_vscode/esp-idf/components/newlib/Kconfig  /home/oscar/esp_vscode/esp-idf/components/nvs_flash/Kconfig /home/oscar/esp_vscode/esp-idf/components/openssl/Kconfig /home/oscar/esp_vscode/esp-idf/components/openthread/Kconfig     /home/oscar/esp_vscode/esp-idf/components/pthread/Kconfig   /home/oscar/esp_vscode/esp-idf/components/spi_flash/Kconfig /home/oscar/esp_vscode/esp-idf/components/spiffs/Kconfig /home/oscar/esp_vscode/esp-idf/components/tcp_transport/Kconfig   /home/oscar/esp_vscode/esp-idf/components/unity/Kconfig /home/oscar/esp_vscode/esp-idf/components/vfs/Kconfig /home/oscar/esp_vscode/esp-idf/components/wear_levelling/Kconfig /home/oscar/esp_vscode/esp-idf/components/wifi_provisioning/Kconfig /home/oscar/esp_vscode/esp-idf/components/wpa_supplicant/Kconfig 
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 241)
-HOSTOBJCOPY := objcopy
 # environment
 LANG = C
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 8)
-COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE := /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/kconfigs_projbuild.in
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 187)
-EXCLUDE_COMPONENTS = 
 # environment
-VSCODE_PID = 16782
-# makefile (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 103)
-MENUCONFIG_STYLE = aquatic
+VSCODE_PID = 40841
 # variable set hash-table stats:
-# Load=180/1024=18%, Rehash=0, Collisions=138/961=14%
+# Load=122/1024=12%, Rehash=0, Collisions=20/156=13%
 
 # Pattern-specific Variable Values
 
@@ -404,304 +263,854 @@ MENUCONFIG_STYLE = aquatic
 
 # Directories
 
-# /home/oscar/esp_vscode/esp-idf/tools/kconfig (device 66308, inode 27004868): 36 files, no impossibilities.
-# . (device 66308, inode 30413282): 12 files, no impossibilities.
-# /home/oscar/esp_vscode/esp-idf/components (device 66308, inode 27527677): 92 files, no impossibilities.
-# /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/main: could not be stat'd.
-# /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/components: could not be stat'd.
+# . (device 66308, inode 30413282): 35 files, no impossibilities.
 
-# 140 files, no impossibilities in 5 directories.
+# 35 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
-# No implicit rules.
+%.hpux_make_needs_suffix_list:
+
+# 1 implicit rules, 0 (0.0%) terminal.
 
 # Files
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/mdns/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:59.192764002
-#  File has been updated.
-#  Successfully updated.
-
-config-clean:
+__idf_cxx: cmake_check_build_system
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 177):
-	$(summary) RM CONFIG
-	rm -rf $(BUILD_DIR_BASE)/include/config $(BUILD_DIR_BASE)/include/sdkconfig.h \
-		$(COMPONENT_KCONFIGS_SOURCE_FILE) $(COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE)
+#  recipe to execute (from 'Makefile', line 1165):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_cxx
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/make/project.mk:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:08.788949835
-#  File has been updated.
-#  Successfully updated.
+__idf_spi_flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+#  recipe to execute (from 'Makefile', line 788):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_spi_flash
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp32c3/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.508673033
-#  File has been updated.
-#  Successfully updated.
+__idf_esp_serial_slave_link: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1451):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_serial_slave_link
 
-all: all_binaries | check_python_dependencies
+__idf_wpa_supplicant: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 996):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_wpa_supplicant
+
+encrypted-app-flash/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 663):
+	$(MAKE) -f esp-idf/esptool_py/CMakeFiles/encrypted-app-flash.dir/build.make esp-idf/esptool_py/CMakeFiles/encrypted-app-flash.dir/build
+
+app/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 260):
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
+
+cmake_force:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+__idf_pthread: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 814):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_pthread
+
+efuse_common_table/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 416):
+	$(MAKE) -f esp-idf/efuse/CMakeFiles/efuse_common_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_common_table.dir/build
+
+__idf_driver: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 502):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_driver
+
+list_install_components:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 107):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+
+__idf_tcp_transport/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1326):
+	$(MAKE) -f esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/build
+
+__idf_esp_adc_cal/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1300):
+	$(MAKE) -f esp-idf/esp_adc_cal/CMakeFiles/__idf_esp_adc_cal.dir/build.make esp-idf/esp_adc_cal/CMakeFiles/__idf_esp_adc_cal.dir/build
+
+partition-table-flash/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 715):
+	$(MAKE) -f esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/build.make esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/build
+
+__idf_app_update: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 762):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_app_update
+
+install/local: preinstall
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 83):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+
+__idf_espcoredump: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 840):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_espcoredump
+
+__idf_esp_event: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 983):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_event
+
+edit_cache:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 72):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+
+__idf_esp_phy/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 858):
+	$(MAKE) -f esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/build.make esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/build
+
+__idf_log/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1053):
+	$(MAKE) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/build
+
+_project_elf_src: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 307):
+	$(MAKE) -f CMakeFiles/Makefile2 _project_elf_src
+
+__idf_spiffs: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1607):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_spiffs
+
+size-files/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 351):
+	$(MAKE) -f CMakeFiles/size-files.dir/build.make CMakeFiles/size-files.dir/build
+
+__idf_soc: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1074):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_soc
+
+bootloader: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 229):
+	$(MAKE) -f CMakeFiles/Makefile2 bootloader
+
+__idf_cmock: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1243):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_cmock
+
+all: cmake_check_build_system
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has not been updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_timer/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:55.264687727
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+#  recipe to execute (from 'Makefile', line 129):
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/CMakeFiles /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/CMakeFiles 0
 
-.PHONY: build-components menuconfig defconfig all build clean all_binaries check-submodules size size-components size-files size-symbols list-components check_python_dependencies term_check config-clean defconfig menuconfig
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/partition_table/Kconfig.projbuild:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:02.652831089
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/coap/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:53.992663002
-#  File has been updated.
-#  Successfully updated.
-
-all_binaries:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/fatfs/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:56.632714304
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/bt/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:52.440632816
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp32s3/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.516673189
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/kxgettext.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/vfs/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:04.436865643
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_lcd/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.868680031
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/driver/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.300668989
-#  File has been updated.
-#  Successfully updated.
-
-list-components:
+__idf_esp_http_client/fast:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1339):
+	$(MAKE) -f esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/build.make esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/build
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_adc_cal/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.520673267
-#  File has been updated.
-#  Successfully updated.
+__idf_esp_common: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1113):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_common
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/mqtt/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:59.244765011
-#  File has been updated.
-#  Successfully updated.
+uf2-app: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 268):
+	$(MAKE) -f CMakeFiles/Makefile2 uf2-app
 
-# Not a target:
-.SUFFIXES:
+__idf_protocomm/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1404):
+	$(MAKE) -f esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build
+
+size/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 364):
+	$(MAKE) -f CMakeFiles/size.dir/build.make CMakeFiles/size.dir/build
+
+efuse_custom_table: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 450):
+	$(MAKE) -f CMakeFiles/Makefile2 efuse_custom_table
+
+.PHONY: default_target cmake_force rebuild_cache rebuild_cache/fast edit_cache edit_cache/fast install/local install/local/fast install install/fast list_install_components list_install_components/fast install/strip install/strip/fast all clean clean/fast preinstall preinstall/fast depend uf2 uf2/fast size-components size-components/fast menuconfig menuconfig/fast flash flash/fast confserver confserver/fast bootloader bootloader/fast gen_project_binary gen_project_binary/fast app app/fast uf2-app uf2-app/fast erase_flash erase_flash/fast monitor monitor/fast _project_elf_src _project_elf_src/fast EnergyConsumptionFramework.elf EnergyConsumptionFramework.elf/fast encrypted-flash encrypted-flash/fast size-files size-files/fast size size/fast __idf_esp_ringbuf __idf_esp_ringbuf/fast __idf_efuse __idf_efuse/fast efuse-common-table efuse-common-table/fast efuse_common_table efuse_common_table/fast show-efuse-table show-efuse-table/fast efuse-custom-table efuse-custom-table/fast efuse_custom_table efuse_custom_table/fast show_efuse_table show_efuse_table/fast efuse_test_table efuse_test_table/fast __idf_esp_ipc __idf_esp_ipc/fast __idf_driver __idf_driver/fast __idf_esp_pm __idf_esp_pm/fast custom_bundle custom_bundle/fast __idf_mbedtls __idf_mbedtls/fast apidoc apidoc/fast lib lib/fast mbedtls mbedtls/fast mbedx509 mbedx509/fast mbedcrypto mbedcrypto/fast encrypted-bootloader-flash encrypted-bootloader-flash/fast bootloader-flash bootloader-flash/fast app_check_size app_check_size/fast encrypted-app-flash encrypted-app-flash/fast app-flash app-flash/fast partition_table-flash partition_table-flash/fast encrypted-partition-table-flash encrypted-partition-table-flash/fast partition-table-flash partition-table-flash/fast partition-table partition-table/fast partition_table_bin partition_table_bin/fast partition_table partition_table/fast __idf_app_update __idf_app_update/fast __idf_bootloader_support __idf_bootloader_support/fast __idf_spi_flash __idf_spi_flash/fast __idf_nvs_flash __idf_nvs_flash/fast __idf_pthread __idf_pthread/fast __idf_esp_gdbstub __idf_esp_gdbstub/fast __idf_espcoredump __idf_espcoredump/fast __idf_esp_phy __idf_esp_phy/fast memory_ld memory_ld/fast __ldgen_output_sections.ld __ldgen_output_sections.ld/fast __idf_esp_system __idf_esp_system/fast __idf_esp_rom __idf_esp_rom/fast __idf_hal __idf_hal/fast __idf_vfs __idf_vfs/fast __idf_esp_eth __idf_esp_eth/fast __idf_tcpip_adapter __idf_tcpip_adapter/fast __idf_esp_netif __idf_esp_netif/fast __idf_esp_event __idf_esp_event/fast __idf_wpa_supplicant __idf_wpa_supplicant/fast __idf_esp_wifi __idf_esp_wifi/fast __idf_console __idf_console/fast __idf_lwip __idf_lwip/fast __idf_log __idf_log/fast __idf_heap __idf_heap/fast __idf_soc __idf_soc/fast __idf_esp_hw_support __idf_esp_hw_support/fast __idf_xtensa __idf_xtensa/fast __idf_esp_common __idf_esp_common/fast __idf_esp_timer __idf_esp_timer/fast __idf_freertos __idf_freertos/fast __idf_newlib __idf_newlib/fast __idf_cxx __idf_cxx/fast __idf_app_trace __idf_app_trace/fast __idf_asio __idf_asio/fast __idf_bt __idf_bt/fast __idf_cbor __idf_cbor/fast __idf_unity __idf_unity/fast __idf_cmock __idf_cmock/fast __idf_coap __idf_coap/fast __idf_nghttp __idf_nghttp/fast __idf_esp-tls __idf_esp-tls/fast __idf_esp_adc_cal __idf_esp_adc_cal/fast __idf_esp_hid __idf_esp_hid/fast __idf_tcp_transport __idf_tcp_transport/fast __idf_esp_http_client __idf_esp_http_client/fast __idf_esp_http_server __idf_esp_http_server/fast __idf_esp_https_ota __idf_esp_https_ota/fast __idf_esp_lcd __idf_esp_lcd/fast __idf_protobuf-c __idf_protobuf-c/fast __idf_protocomm __idf_protocomm/fast __idf_mdns __idf_mdns/fast __idf_esp_local_ctrl __idf_esp_local_ctrl/fast __idf_sdmmc __idf_sdmmc/fast __idf_esp_serial_slave_link __idf_esp_serial_slave_link/fast __idf_esp_websocket_client __idf_esp_websocket_client/fast __idf_expat __idf_expat/fast __idf_wear_levelling __idf_wear_levelling/fast __idf_fatfs __idf_fatfs/fast __idf_freemodbus __idf_freemodbus/fast __idf_jsmn __idf_jsmn/fast __idf_json __idf_json/fast __idf_libsodium __idf_libsodium/fast __idf_mqtt __idf_mqtt/fast __idf_openssl __idf_openssl/fast __idf_perfmon __idf_perfmon/fast __idf_spiffs __idf_spiffs/fast __idf_ulp __idf_ulp/fast __idf_wifi_provisioning __idf_wifi_provisioning/fast __idf_src __idf_src/fast project_elf_src_esp32.obj project_elf_src_esp32.c.obj project_elf_src_esp32.i project_elf_src_esp32.c.i project_elf_src_esp32.s project_elf_src_esp32.c.s help cmake_check_build_system
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
+custom_bundle/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 533):
+	$(MAKE) -f esp-idf/mbedtls/CMakeFiles/custom_bundle.dir/build.make esp-idf/mbedtls/CMakeFiles/custom_bundle.dir/build
+
+efuse-common-table: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 398):
+	$(MAKE) -f CMakeFiles/Makefile2 efuse-common-table
+
+partition_table-flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 684):
+	$(MAKE) -f CMakeFiles/Makefile2 partition_table-flash
+
+__idf_hal/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 923):
+	$(MAKE) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/build
+
+__idf_cxx/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1170):
+	$(MAKE) -f esp-idf/cxx/CMakeFiles/__idf_cxx.dir/build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/build
+
+__idf_esp_pm/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 520):
+	$(MAKE) -f esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/build.make esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/build
  
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/make/common.mk:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:08.788949835
-#  File has been updated.
-#  Successfully updated.
+
+show_efuse_table: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 463):
+	$(MAKE) -f CMakeFiles/Makefile2 show_efuse_table
+
+gen_project_binary/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 247):
+	$(MAKE) -f CMakeFiles/gen_project_binary.dir/build.make CMakeFiles/gen_project_binary.dir/build
+
+__ldgen_output_sections.ld/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 884):
+	$(MAKE) -f esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build.make esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build
+
+__idf_esp_common/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1118):
+	$(MAKE) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build
+
+__idf_efuse/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 390):
+	$(MAKE) -f esp-idf/efuse/CMakeFiles/__idf_efuse.dir/build.make esp-idf/efuse/CMakeFiles/__idf_efuse.dir/build
+
+monitor: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 294):
+	$(MAKE) -f CMakeFiles/Makefile2 monitor
+
+preinstall/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 151):
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+
+__idf_esp_https_ota/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1365):
+	$(MAKE) -f esp-idf/esp_https_ota/CMakeFiles/__idf_esp_https_ota.dir/build.make esp-idf/esp_https_ota/CMakeFiles/__idf_esp_https_ota.dir/build
+
+__idf_esp_lcd/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1378):
+	$(MAKE) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build
+
+mbedcrypto: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 606):
+	$(MAKE) -f CMakeFiles/Makefile2 mbedcrypto
+
+lib/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 572):
+	$(MAKE) -f esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib.dir/build.make esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib.dir/build
+
+__idf_esp-tls/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1287):
+	$(MAKE) -f esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/build.make esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/build
+
+__idf_fatfs: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1503):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_fatfs
+
+__idf_esp_websocket_client/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1469):
+	$(MAKE) -f esp-idf/esp_websocket_client/CMakeFiles/__idf_esp_websocket_client.dir/build.make esp-idf/esp_websocket_client/CMakeFiles/__idf_esp_websocket_client.dir/build
+
+__idf_src/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1651):
+	$(MAKE) -f esp-idf/src/CMakeFiles/__idf_src.dir/build.make esp-idf/src/CMakeFiles/__idf_src.dir/build
+
+encrypted-app-flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 658):
+	$(MAKE) -f CMakeFiles/Makefile2 encrypted-app-flash
+
+__idf_nghttp/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1274):
+	$(MAKE) -f esp-idf/nghttp/CMakeFiles/__idf_nghttp.dir/build.make esp-idf/nghttp/CMakeFiles/__idf_nghttp.dir/build
+
+__idf_coap/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1261):
+	$(MAKE) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/build
+
+__idf_mdns: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1412):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_mdns
+
+__idf_esp_ringbuf: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 372):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_ringbuf
+
+.SUFFIXES: .hpux_make_needs_suffix_list
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+__idf_expat/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1482):
+	$(MAKE) -f esp-idf/expat/CMakeFiles/__idf_expat.dir/build.make esp-idf/expat/CMakeFiles/__idf_expat.dir/build
+
+efuse_test_table: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 476):
+	$(MAKE) -f CMakeFiles/Makefile2 efuse_test_table
+
+partition-table-flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 710):
+	$(MAKE) -f CMakeFiles/Makefile2 partition-table-flash
+
+__idf_ulp/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1625):
+	$(MAKE) -f esp-idf/ulp/CMakeFiles/__idf_ulp.dir/build.make esp-idf/ulp/CMakeFiles/__idf_ulp.dir/build
+
+mbedtls/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 585):
+	$(MAKE) -f esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/build.make esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/build
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-09 10:09:55.714222255
+#  Last modified 2022-07-23 15:21:07.258800807
 #  File has been updated.
 #  Successfully updated.
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/jsmn/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:57.152724404
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_wifi/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:55.284688116
-#  File has been updated.
-#  Successfully updated.
-
-prepare_kconfig_files:
+__idf_perfmon: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 75):
-	mkdir -p $(BUILD_DIR_BASE)
-	$(PYTHON) $(IDF_PATH)/tools/kconfig_new/prepare_kconfig_files.py \
-		--env "COMPONENT_KCONFIGS=$(strip $(COMPONENT_KCONFIGS))" \
-		--env "COMPONENT_KCONFIGS_PROJBUILD=$(strip $(COMPONENT_KCONFIGS_PROJBUILD))" \
-		--env "COMPONENT_KCONFIGS_SOURCE_FILE=$(COMPONENT_KCONFIGS_SOURCE_FILE)" \
-		--env "COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=$(COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE)"
+#  recipe to execute (from 'Makefile', line 1594):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_perfmon
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_ipc/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.860679876
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/make/version.mk:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:08.792949911
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/nconf.gui.c:
+__idf_ulp: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1620):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_ulp
 
-check-submodules:
+partition_table/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 754):
+	$(MAKE) -f esp-idf/partition_table/CMakeFiles/partition_table.dir/build.make esp-idf/partition_table/CMakeFiles/partition_table.dir/build
+
+__idf_freertos/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1144):
+	$(MAKE) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build
+
+__idf_mqtt: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1568):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_mqtt
+ 
+
+__idf_lwip/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1040):
+	$(MAKE) -f esp-idf/lwip/CMakeFiles/__idf_lwip.dir/build.make esp-idf/lwip/CMakeFiles/__idf_lwip.dir/build
+
+__idf_esp_wifi: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1009):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_wifi
+
+project_elf_src_esp32.s: project_elf_src_esp32.c.s
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 
-defconfig: | check_python_dependencies prepare_kconfig_files
+__idf_esp_http_server/fast:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 159):
-	$(summary) DEFCONFIG
-	$(call RunConfGen,)
+#  recipe to execute (from 'Makefile', line 1352):
+	$(MAKE) -f esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/build
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/log/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:57.748735976
-#  File has been updated.
-#  Successfully updated.
+__idf_vfs/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 936):
+	$(MAKE) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build
 
-build:
+__idf_perfmon/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1599):
+	$(MAKE) -f esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/build.make esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/build
+
+app: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 255):
+	$(MAKE) -f CMakeFiles/Makefile2 app
+
+bootloader-flash/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 637):
+	$(MAKE) -f esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build.make esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build
+
+__idf_jsmn: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1529):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_jsmn
+
+__idf_bootloader_support/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 780):
+	$(MAKE) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build
+
+memory_ld/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 871):
+	$(MAKE) -f esp-idf/esp_system/CMakeFiles/memory_ld.dir/build.make esp-idf/esp_system/CMakeFiles/memory_ld.dir/build
+
+.NOTPARALLEL:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+__idf_tcp_transport: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1321):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_tcp_transport
+
+efuse_common_table: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 411):
+	$(MAKE) -f CMakeFiles/Makefile2 efuse_common_table
+
+__idf_esp_timer/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1131):
+	$(MAKE) -f esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/build.make esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/build
+
+__idf_freemodbus/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1521):
+	$(MAKE) -f esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/build.make esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/build
+
+__idf_wpa_supplicant/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1001):
+	$(MAKE) -f esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/build.make esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/build
+
+__idf_log: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1048):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_log
+
+project_elf_src_esp32.obj: project_elf_src_esp32.c.obj
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_rom/Kconfig.projbuild:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.996682519
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/conf.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_hw_support/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.668676143
-#  File has been updated.
-#  Successfully updated.
-
-/home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/include/config/auto.conf: /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/sdkconfig /home/oscar/esp_vscode/esp-idf/components/app_trace/Kconfig /home/oscar/esp_vscode/esp-idf/components/asio/Kconfig /home/oscar/esp_vscode/esp-idf/components/bt/Kconfig /home/oscar/esp_vscode/esp-idf/components/coap/Kconfig /home/oscar/esp_vscode/esp-idf/components/driver/Kconfig /home/oscar/esp_vscode/esp-idf/components/efuse/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp-tls/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32c3/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32h2/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32s2/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32s3/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_adc_cal/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_common/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_eth/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_event/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_gdbstub/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_http_client/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_http_server/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_https_ota/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_https_server/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_hw_support/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_ipc/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_lcd/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_netif/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_phy/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_pm/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_system/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_timer/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_wifi/Kconfig /home/oscar/esp_vscode/esp-idf/components/espcoredump/Kconfig /home/oscar/esp_vscode/esp-idf/components/fatfs/Kconfig /home/oscar/esp_vscode/esp-idf/components/freemodbus/Kconfig /home/oscar/esp_vscode/esp-idf/components/freertos/Kconfig /home/oscar/esp_vscode/esp-idf/components/hal/Kconfig /home/oscar/esp_vscode/esp-idf/components/heap/Kconfig /home/oscar/esp_vscode/esp-idf/components/jsmn/Kconfig /home/oscar/esp_vscode/esp-idf/components/libsodium/Kconfig /home/oscar/esp_vscode/esp-idf/components/log/Kconfig /home/oscar/esp_vscode/esp-idf/components/lwip/Kconfig /home/oscar/esp_vscode/esp-idf/components/mbedtls/Kconfig /home/oscar/esp_vscode/esp-idf/components/mdns/Kconfig /home/oscar/esp_vscode/esp-idf/components/mqtt/Kconfig /home/oscar/esp_vscode/esp-idf/components/newlib/Kconfig /home/oscar/esp_vscode/esp-idf/components/nvs_flash/Kconfig /home/oscar/esp_vscode/esp-idf/components/openssl/Kconfig /home/oscar/esp_vscode/esp-idf/components/openthread/Kconfig /home/oscar/esp_vscode/esp-idf/components/pthread/Kconfig /home/oscar/esp_vscode/esp-idf/components/spi_flash/Kconfig /home/oscar/esp_vscode/esp-idf/components/spiffs/Kconfig /home/oscar/esp_vscode/esp-idf/components/tcp_transport/Kconfig /home/oscar/esp_vscode/esp-idf/components/unity/Kconfig /home/oscar/esp_vscode/esp-idf/components/vfs/Kconfig /home/oscar/esp_vscode/esp-idf/components/wear_levelling/Kconfig /home/oscar/esp_vscode/esp-idf/components/wifi_provisioning/Kconfig /home/oscar/esp_vscode/esp-idf/components/wpa_supplicant/Kconfig /home/oscar/esp_vscode/esp-idf/components/app_update/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/bootloader/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/esp_rom/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/esptool_py/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/partition_table/Kconfig.projbuild | check_python_dependencies prepare_kconfig_files
+__idf_esp_wifi/fast:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 165):
-	$(summary) GENCONFIG
-	$(call RunConfGen,)
-	touch $(SDKCONFIG_MAKEFILE) $(BUILD_DIR_BASE)/include/sdkconfig.h  # ensure newer than sdkconfig
-
-/home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/include/sdkconfig.h: /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/sdkconfig /home/oscar/esp_vscode/esp-idf/components/app_trace/Kconfig /home/oscar/esp_vscode/esp-idf/components/asio/Kconfig /home/oscar/esp_vscode/esp-idf/components/bt/Kconfig /home/oscar/esp_vscode/esp-idf/components/coap/Kconfig /home/oscar/esp_vscode/esp-idf/components/driver/Kconfig /home/oscar/esp_vscode/esp-idf/components/efuse/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp-tls/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32c3/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32h2/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32s2/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp32s3/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_adc_cal/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_common/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_eth/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_event/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_gdbstub/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_http_client/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_http_server/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_https_ota/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_https_server/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_hw_support/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_ipc/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_lcd/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_netif/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_phy/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_pm/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_system/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_timer/Kconfig /home/oscar/esp_vscode/esp-idf/components/esp_wifi/Kconfig /home/oscar/esp_vscode/esp-idf/components/espcoredump/Kconfig /home/oscar/esp_vscode/esp-idf/components/fatfs/Kconfig /home/oscar/esp_vscode/esp-idf/components/freemodbus/Kconfig /home/oscar/esp_vscode/esp-idf/components/freertos/Kconfig /home/oscar/esp_vscode/esp-idf/components/hal/Kconfig /home/oscar/esp_vscode/esp-idf/components/heap/Kconfig /home/oscar/esp_vscode/esp-idf/components/jsmn/Kconfig /home/oscar/esp_vscode/esp-idf/components/libsodium/Kconfig /home/oscar/esp_vscode/esp-idf/components/log/Kconfig /home/oscar/esp_vscode/esp-idf/components/lwip/Kconfig /home/oscar/esp_vscode/esp-idf/components/mbedtls/Kconfig /home/oscar/esp_vscode/esp-idf/components/mdns/Kconfig /home/oscar/esp_vscode/esp-idf/components/mqtt/Kconfig /home/oscar/esp_vscode/esp-idf/components/newlib/Kconfig /home/oscar/esp_vscode/esp-idf/components/nvs_flash/Kconfig /home/oscar/esp_vscode/esp-idf/components/openssl/Kconfig /home/oscar/esp_vscode/esp-idf/components/openthread/Kconfig /home/oscar/esp_vscode/esp-idf/components/pthread/Kconfig /home/oscar/esp_vscode/esp-idf/components/spi_flash/Kconfig /home/oscar/esp_vscode/esp-idf/components/spiffs/Kconfig /home/oscar/esp_vscode/esp-idf/components/tcp_transport/Kconfig /home/oscar/esp_vscode/esp-idf/components/unity/Kconfig /home/oscar/esp_vscode/esp-idf/components/vfs/Kconfig /home/oscar/esp_vscode/esp-idf/components/wear_levelling/Kconfig /home/oscar/esp_vscode/esp-idf/components/wifi_provisioning/Kconfig /home/oscar/esp_vscode/esp-idf/components/wpa_supplicant/Kconfig /home/oscar/esp_vscode/esp-idf/components/app_update/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/bootloader/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/esp_rom/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/esptool_py/Kconfig.projbuild /home/oscar/esp_vscode/esp-idf/components/partition_table/Kconfig.projbuild | check_python_dependencies prepare_kconfig_files
-#  Implicit rule search has not been done.
-#  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 165):
-	$(summary) GENCONFIG
-	$(call RunConfGen,)
-	touch $(SDKCONFIG_MAKEFILE) $(BUILD_DIR_BASE)/include/sdkconfig.h  # ensure newer than sdkconfig
+#  recipe to execute (from 'Makefile', line 1014):
+	$(MAKE) -f esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/build
 
-check_python_dependencies:
+clean/fast: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+__idf_esp_lcd: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1373):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_lcd
+
+__idf_libsodium/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1560):
+	$(MAKE) -f esp-idf/libsodium/CMakeFiles/__idf_libsodium.dir/build.make esp-idf/libsodium/CMakeFiles/__idf_libsodium.dir/build
+
+encrypted-partition-table-flash/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 702):
+	$(MAKE) -f esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/build.make esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/build
+
+size-files: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 346):
+	$(MAKE) -f CMakeFiles/Makefile2 size-files
+
+__idf_bt: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1204):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_bt
+
+install/strip/fast: preinstall/fast
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 123):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+
+__idf_freemodbus: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1516):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_freemodbus
+
+size: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 359):
+	$(MAKE) -f CMakeFiles/Makefile2 size
+
+__idf_esp_http_client: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1334):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_http_client
+ 
+
+__idf_mdns/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1417):
+	$(MAKE) -f esp-idf/mdns/CMakeFiles/__idf_mdns.dir/build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/build
+
+cmake_check_build_system:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
-#  Failed to be updated.
+#  Needs to be updated (-q is set).
 # automatic
-# @ := check_python_dependencies
+# @ := cmake_check_build_system
 # automatic
 # % := 
 # automatic
@@ -717,183 +1126,470 @@ check_python_dependencies:
 # automatic
 # ? := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=2/14=14%
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 252):
-	$(PYTHON) $(IDF_PATH)/tools/check_python_dependencies.py
+# Load=8/32=25%, Rehash=0, Collisions=3/14=21%
+#  recipe to execute (from 'Makefile', line 1822):
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp-tls/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.476672411
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/expr.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/conf-idf: /home/oscar/esp_vscode/esp-idf/tools/kconfig/expr.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/confdata.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/expand_env.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/kxgettext.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/conf.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/nconf.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/mconf.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/images.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/menu.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/nconf.gui.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/util.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/gconf.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/symbol.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/zconf.y
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 43):
-	@echo "mconf-idf is not required on this platform"
-
-size-files:
+erase_flash/fast:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 286):
+	$(MAKE) -f CMakeFiles/erase_flash.dir/build.make CMakeFiles/erase_flash.dir/build
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/symbol.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/util.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-size:
+custom_bundle: cmake_check_build_system
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 528):
+	$(MAKE) -f CMakeFiles/Makefile2 custom_bundle
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_netif/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.904680731
-#  File has been updated.
-#  Successfully updated.
+__idf_esp_rom/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 910):
+	$(MAKE) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/hal/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:56.83271819
-#  File has been updated.
-#  Successfully updated.
+__idf_hal: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 918):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_hal
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_http_server/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.644675677
-#  File has been updated.
-#  Successfully updated.
+__idf_esp_hid/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1313):
+	$(MAKE) -f esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/build.make esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/build
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_system/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:55.17268594
-#  File has been updated.
-#  Successfully updated.
+project_elf_src_esp32.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1669):
+	$(MAKE) -f CMakeFiles/EnergyConsumptionFramework.elf.dir/build.make CMakeFiles/EnergyConsumptionFramework.elf.dir/project_elf_src_esp32.c.i
+
+__idf_esp_pm: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 515):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_pm
+
+__ldgen_output_sections.ld: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 879):
+	$(MAKE) -f CMakeFiles/Makefile2 __ldgen_output_sections.ld
 
 help:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project.mk', line 25):
-	@echo "Welcome to Espressif IDF build system. Some useful make targets:"
-	@echo ""
-	@echo "make menuconfig - Configure IDF project"
-	@echo "make defconfig - Set defaults for all new configuration options"
-	@echo ""
-	@echo "make all - Build app, bootloader, partition table"
-	@echo "make flash - Flash app, bootloader, partition table to a chip"
-	@echo "make clean - Remove all build output"
-	@echo "make size - Display the static memory footprint of the app"
-	@echo "make size-components, size-files - Finer-grained memory footprints"
-	@echo "make size-symbols - Per symbol memory footprint. Requires COMPONENT=<component>"
-	@echo "make erase_flash - Erase entire flash contents"
-	@echo "make erase_otadata - Erase ota_data partition; First bootable partition (factory or OTAx) will be used on next boot."
-	@echo "                     This assumes this project's partition table is the one flashed on the device."
-	@echo "make monitor - Run idf_monitor tool to monitor serial output from app"
-	@echo "make simple_monitor - Monitor serial output on terminal console"
-	@echo "make list-components - List all components in the project"
-	@echo ""
-	@echo "make app - Build just the app"
-	@echo "make app-flash - Flash just the app"
-	@echo "make app-clean - Clean just the app"
-	@echo "make print_flash_cmd - Print the arguments for esptool when flash"
-	@echo "make check_python_dependencies - Check that the required python packages are installed"
-	@echo ""
-	@echo "See also 'make bootloader', 'make bootloader-flash', 'make bootloader-clean', "
-	@echo "'make partition_table', etc, etc."
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/openthread/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:00.212783788
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/espcoredump/Kconfig:
-#  Implicit rule search has been done.
- 
-#  Last modified 2022-06-08 16:32:55.48869208
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_event/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.576674355
-#  File has been updated.
-#  Successfully updated.
-
-size-symbols:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1683):
+	@echo "The following are some of the valid targets for this Makefile:"
+	@echo "... all (the default if no target is provided)"
+	@echo "... clean"
+	@echo "... depend"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... uf2"
+	@echo "... install/local"
+	@echo "... size-components"
+	@echo "... menuconfig"
+	@echo "... flash"
+	@echo "... confserver"
+	@echo "... install"
+	@echo "... bootloader"
+	@echo "... list_install_components"
+	@echo "... gen_project_binary"
+	@echo "... app"
+	@echo "... uf2-app"
+	@echo "... erase_flash"
+	@echo "... monitor"
+	@echo "... _project_elf_src"
+	@echo "... install/strip"
+	@echo "... EnergyConsumptionFramework.elf"
+	@echo "... encrypted-flash"
+	@echo "... size-files"
+	@echo "... size"
+	@echo "... __idf_esp_ringbuf"
+	@echo "... __idf_efuse"
+	@echo "... efuse-common-table"
+	@echo "... efuse_common_table"
+	@echo "... show-efuse-table"
+	@echo "... efuse-custom-table"
+	@echo "... efuse_custom_table"
+	@echo "... show_efuse_table"
+	@echo "... efuse_test_table"
+	@echo "... __idf_esp_ipc"
+	@echo "... __idf_driver"
+	@echo "... __idf_esp_pm"
+	@echo "... custom_bundle"
+	@echo "... __idf_mbedtls"
+	@echo "... apidoc"
+	@echo "... lib"
+	@echo "... mbedtls"
+	@echo "... mbedx509"
+	@echo "... mbedcrypto"
+	@echo "... encrypted-bootloader-flash"
+	@echo "... bootloader-flash"
+	@echo "... app_check_size"
+	@echo "... encrypted-app-flash"
+	@echo "... app-flash"
+	@echo "... partition_table-flash"
+	@echo "... encrypted-partition-table-flash"
+	@echo "... partition-table-flash"
+	@echo "... partition-table"
+	@echo "... partition_table_bin"
+	@echo "... partition_table"
+	@echo "... __idf_app_update"
+	@echo "... __idf_bootloader_support"
+	@echo "... __idf_spi_flash"
+	@echo "... __idf_nvs_flash"
+	@echo "... __idf_pthread"
+	@echo "... __idf_esp_gdbstub"
+	@echo "... __idf_espcoredump"
+	@echo "... __idf_esp_phy"
+	@echo "... memory_ld"
+	@echo "... __ldgen_output_sections.ld"
+	@echo "... __idf_esp_system"
+	@echo "... __idf_esp_rom"
+	@echo "... __idf_hal"
+	@echo "... __idf_vfs"
+	@echo "... __idf_esp_eth"
+	@echo "... __idf_tcpip_adapter"
+	@echo "... __idf_esp_netif"
+	@echo "... __idf_esp_event"
+	@echo "... __idf_wpa_supplicant"
+	@echo "... __idf_esp_wifi"
+	@echo "... __idf_console"
+	@echo "... __idf_lwip"
+	@echo "... __idf_log"
+	@echo "... __idf_heap"
+	@echo "... __idf_soc"
+	@echo "... __idf_esp_hw_support"
+	@echo "... __idf_xtensa"
+	@echo "... __idf_esp_common"
+	@echo "... __idf_esp_timer"
+	@echo "... __idf_freertos"
+	@echo "... __idf_newlib"
+	@echo "... __idf_cxx"
+	@echo "... __idf_app_trace"
+	@echo "... __idf_asio"
+	@echo "... __idf_bt"
+	@echo "... __idf_cbor"
+	@echo "... __idf_unity"
+	@echo "... __idf_cmock"
+	@echo "... __idf_coap"
+	@echo "... __idf_nghttp"
+	@echo "... __idf_esp-tls"
+	@echo "... __idf_esp_adc_cal"
+	@echo "... __idf_esp_hid"
+	@echo "... __idf_tcp_transport"
+	@echo "... __idf_esp_http_client"
+	@echo "... __idf_esp_http_server"
+	@echo "... __idf_esp_https_ota"
+	@echo "... __idf_esp_lcd"
+	@echo "... __idf_protobuf-c"
+	@echo "... __idf_protocomm"
+	@echo "... __idf_mdns"
+	@echo "... __idf_esp_local_ctrl"
+	@echo "... __idf_sdmmc"
+	@echo "... __idf_esp_serial_slave_link"
+	@echo "... __idf_esp_websocket_client"
+	@echo "... __idf_expat"
+	@echo "... __idf_wear_levelling"
+	@echo "... __idf_fatfs"
+	@echo "... __idf_freemodbus"
+	@echo "... __idf_jsmn"
+	@echo "... __idf_json"
+	@echo "... __idf_libsodium"
+	@echo "... __idf_mqtt"
+	@echo "... __idf_openssl"
+	@echo "... __idf_perfmon"
+	@echo "... __idf_spiffs"
+	@echo "... __idf_ulp"
+	@echo "... __idf_wifi_provisioning"
+	@echo "... __idf_src"
+	@echo "... project_elf_src_esp32.obj"
+	@echo "... project_elf_src_esp32.i"
+	@echo "... project_elf_src_esp32.s"
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/tcp_transport/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:03.440846355
-#  File has been updated.
-#  Successfully updated.
+__idf_efuse: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 385):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_efuse
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/freertos/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:56.748716558
-#  File has been updated.
-#  Successfully updated.
+__idf_nvs_flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 801):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_nvs_flash
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/lwip/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:57.760736209
-#  File has been updated.
-#  Successfully updated.
+__idf_esp_phy: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 853):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_phy
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/unity/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:04.30086301
-#  File has been updated.
-#  Successfully updated.
+__idf_spiffs/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1612):
+	$(MAKE) -f esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/build.make esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/build
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_common/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.528673421
-#  File has been updated.
-#  Successfully updated.
+gen_project_binary: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 242):
+	$(MAKE) -f CMakeFiles/Makefile2 gen_project_binary
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_eth/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.540673655
-#  File has been updated.
-#  Successfully updated.
+__idf_unity: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1230):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_unity
+
+__idf_heap/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1066):
+	$(MAKE) -f esp-idf/heap/CMakeFiles/__idf_heap.dir/build.make esp-idf/heap/CMakeFiles/__idf_heap.dir/build
+
+preinstall: all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 146):
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+
+__idf_wear_levelling/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1495):
+	$(MAKE) -f esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/build.make esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/build
+
+__idf_esp_https_ota: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1360):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_https_ota
+
+lib: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 567):
+	$(MAKE) -f CMakeFiles/Makefile2 lib
+ 
+
+partition-table/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 728):
+	$(MAKE) -f esp-idf/partition_table/CMakeFiles/partition-table.dir/build.make esp-idf/partition_table/CMakeFiles/partition-table.dir/build
+
+uf2/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 169):
+	$(MAKE) -f CMakeFiles/uf2.dir/build.make CMakeFiles/uf2.dir/build
+
+flash/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 208):
+	$(MAKE) -f CMakeFiles/flash.dir/build.make CMakeFiles/flash.dir/build
+
+show-efuse-table/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 429):
+	$(MAKE) -f esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build.make esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build
+
+__idf_xtensa/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1105):
+	$(MAKE) -f esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build
+
+.SILENT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+app-flash/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 676):
+	$(MAKE) -f esp-idf/esptool_py/CMakeFiles/app-flash.dir/build.make esp-idf/esptool_py/CMakeFiles/app-flash.dir/build
+
+depend:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 156):
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+
+__idf_esp_ipc/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 494):
+	$(MAKE) -f esp-idf/esp_ipc/CMakeFiles/__idf_esp_ipc.dir/build.make esp-idf/esp_ipc/CMakeFiles/__idf_esp_ipc.dir/build
+
+__idf_tcpip_adapter/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 962):
+	$(MAKE) -f esp-idf/tcpip_adapter/CMakeFiles/__idf_tcpip_adapter.dir/build.make esp-idf/tcpip_adapter/CMakeFiles/__idf_tcpip_adapter.dir/build
+
+partition_table-flash/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 689):
+	$(MAKE) -f esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/build.make esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/build
+
+__idf_nghttp: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1269):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_nghttp
+
+__idf_coap: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1256):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_coap
+
+__idf_json/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1547):
+	$(MAKE) -f esp-idf/json/CMakeFiles/__idf_json.dir/build.make esp-idf/json/CMakeFiles/__idf_json.dir/build
+
+__idf_openssl/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1586):
+	$(MAKE) -f esp-idf/openssl/CMakeFiles/__idf_openssl.dir/build.make esp-idf/openssl/CMakeFiles/__idf_openssl.dir/build
+
+menuconfig/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 195):
+	$(MAKE) -f CMakeFiles/menuconfig.dir/build.make CMakeFiles/menuconfig.dir/build
+
+__idf_src: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1646):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_src
+
+__idf_expat: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1477):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_expat
+
+partition_table: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 749):
+	$(MAKE) -f CMakeFiles/Makefile2 partition_table
+
+mbedtls: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 580):
+	$(MAKE) -f CMakeFiles/Makefile2 mbedtls
+
+__idf_sdmmc/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1443):
+	$(MAKE) -f esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/build.make esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/build
+
+__idf_esp_hw_support/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1092):
+	$(MAKE) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build
 
 # Not a target:
 .DEFAULT:
@@ -901,325 +1597,952 @@ size-symbols:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/spi_flash/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:03.308843798
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/zconf.y:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/freemodbus/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:56.692715471
-#  File has been updated.
-#  Successfully updated.
-
-term_check:
+app_check_size/fast:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 114):
-	${PYTHON} ${IDF_PATH}/tools/check_term.py
+#  recipe to execute (from 'Makefile', line 650):
+	$(MAKE) -f esp-idf/esptool_py/CMakeFiles/app_check_size.dir/build.make esp-idf/esptool_py/CMakeFiles/app_check_size.dir/build
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/libsodium/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:57.320727666
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_gdbstub/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.596674744
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/gconf.c:
+__idf_app_trace/fast:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1183):
+	$(MAKE) -f esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/build.make esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/build
+
+__idf_freertos: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1139):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_freertos
+
+__idf_lwip: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+ 
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1035):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_lwip
+
+default_target: all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/spiffs/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:03.392845424
-#  File has been updated.
-#  Successfully updated.
+__idf_esp_http_server: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1347):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_http_server
+
+__idf_vfs: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 931):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_vfs
+
+bootloader-flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 632):
+	$(MAKE) -f CMakeFiles/Makefile2 bootloader-flash
+
+__idf_protobuf-c/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1391):
+	$(MAKE) -f esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/build.make esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/build
+
+memory_ld: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 866):
+	$(MAKE) -f CMakeFiles/Makefile2 memory_ld
+
+__idf_protocomm: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1399):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_protocomm
+
+__idf_bootloader_support: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 775):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_bootloader_support
+
+size-components/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 182):
+	$(MAKE) -f CMakeFiles/size-components.dir/build.make CMakeFiles/size-components.dir/build
+
+__idf_asio/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1196):
+	$(MAKE) -f esp-idf/asio/CMakeFiles/__idf_asio.dir/build.make esp-idf/asio/CMakeFiles/__idf_asio.dir/build
+
+__idf_esp_netif/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 975):
+	$(MAKE) -f esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/build.make esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/build
+
+__idf_json: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1542):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_json
+
+__idf_nvs_flash/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 806):
+	$(MAKE) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build
+
+efuse-custom-table/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 442):
+	$(MAKE) -f esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/build.make esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/build
+
+encrypted-flash/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 338):
+	$(MAKE) -f CMakeFiles/encrypted-flash.dir/build.make CMakeFiles/encrypted-flash.dir/build
+
+__idf_esp_timer: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1126):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_timer
+
+__idf_esp_websocket_client: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1464):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_websocket_client
+
+partition_table_bin/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 741):
+	$(MAKE) -f esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/build.make esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/build
+
+project_elf_src_esp32.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1678):
+	$(MAKE) -f CMakeFiles/EnergyConsumptionFramework.elf.dir/build.make CMakeFiles/EnergyConsumptionFramework.elf.dir/project_elf_src_esp32.c.s
+
+__idf_console: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1022):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_console
+
+EnergyConsumptionFramework.elf/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 325):
+	$(MAKE) -f CMakeFiles/EnergyConsumptionFramework.elf.dir/build.make CMakeFiles/EnergyConsumptionFramework.elf.dir/build
+
+__idf_mbedtls/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 546):
+	$(MAKE) -f esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/build.make esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/build
+
+__idf_wifi_provisioning/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1638):
+	$(MAKE) -f esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build.make esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build
+
+confserver/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 221):
+	$(MAKE) -f CMakeFiles/confserver.dir/build.make CMakeFiles/confserver.dir/build
+
+mbedx509/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 598):
+	$(MAKE) -f esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/build.make esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/build
+
+__idf_esp_system/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 897):
+	$(MAKE) -f esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/build.make esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/build
 
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 136):
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_pm/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.972682053
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/sdkconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-01 17:36:54.475693193
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/expand_env.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp32s2/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.512673111
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/heap/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:57.100723394
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/wear_levelling/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:04.460866108
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/app_trace/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:51.420612967
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/make/project_config.mk:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:08.792949911
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/bootloader/Kconfig.projbuild:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:52.320630482
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/asio/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:51.464613823
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp32h2/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.508673033
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esptool_py/Kconfig.projbuild:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:55.528692857
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/openssl/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:00.192783401
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/newlib/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:59.280765709
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/mconf.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/nconf.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-menuconfig: /home/oscar/esp_vscode/esp-idf/tools/kconfig/mconf-idf | check_python_dependencies term_check prepare_kconfig_files
+__idf_esp_eth/fast:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 142):
-	$(summary) MENUCONFIG
-	$(call RunConfGen,--dont-write-deprecated)
-	# RunConfGen before menuconfig ensures that deprecated options won't be ignored (they've got renamed)
-	$(call RunMenuConf)
-	# RunConfGen after menuconfig ensures that deprecated options are appended to $(SDKCONFIG) for backward compatibility
-	$(call RunConfGen,)
+#  recipe to execute (from 'Makefile', line 949):
+	$(MAKE) -f esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/build.make esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/build
 
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/mconf-idf: /home/oscar/esp_vscode/esp-idf/tools/kconfig/expr.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/confdata.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/expand_env.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/kxgettext.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/conf.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/nconf.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/mconf.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/images.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/menu.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/nconf.gui.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/util.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/gconf.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/symbol.c /home/oscar/esp_vscode/esp-idf/tools/kconfig/zconf.y /home/oscar/esp_vscode/esp-idf/tools/kconfig/conf-idf
+install/fast: preinstall/fast
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from '/home/oscar/esp_vscode/esp-idf/make/project_config.mk', line 43):
-	@echo "mconf-idf is not required on this platform"
+#  recipe to execute (from 'Makefile', line 101):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_http_client/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.636675521
-#  File has been updated.
-#  Successfully updated.
+__idf_libsodium: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1555):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_libsodium
 
-build-components:
+__idf_cbor: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1217):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_cbor
+
+encrypted-partition-table-flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 697):
+	$(MAKE) -f CMakeFiles/Makefile2 encrypted-partition-table-flash
+
+apidoc: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 554):
+	$(MAKE) -f CMakeFiles/Makefile2 apidoc
+
+__idf_console/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1027):
+	$(MAKE) -f esp-idf/console/CMakeFiles/__idf_console.dir/build.make esp-idf/console/CMakeFiles/__idf_console.dir/build
+
+__idf_esp_serial_slave_link/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1456):
+	$(MAKE) -f esp-idf/esp_serial_slave_link/CMakeFiles/__idf_esp_serial_slave_link.dir/build.make esp-idf/esp_serial_slave_link/CMakeFiles/__idf_esp_serial_slave_link.dir/build
+
+rebuild_cache/fast: rebuild_cache
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/confdata.c:
+__idf_spi_flash/fast:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 793):
+	$(MAKE) -f esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/build.make esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/build
+
+install/strip: preinstall
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 117):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+
+__idf_driver/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 507):
+	$(MAKE) -f esp-idf/driver/CMakeFiles/__idf_driver.dir/build.make esp-idf/driver/CMakeFiles/__idf_driver.dir/build
+
+list_install_components/fast: list_install_components
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp32/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.492672722
-#  File has been updated.
-#  Successfully updated.
+edit_cache/fast: edit_cache
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/nvs_flash/Kconfig:
-#  Implicit rule search has been done.
+__idf_pthread/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 819):
  
-#  Last modified 2022-06-08 16:33:00.14478247
-#  File has been updated.
-#  Successfully updated.
+	$(MAKE) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build
+
+erase_flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 281):
+	$(MAKE) -f CMakeFiles/Makefile2 erase_flash
+
+project_elf_src_esp32.c.obj:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1660):
+	$(MAKE) -f CMakeFiles/EnergyConsumptionFramework.elf.dir/build.make CMakeFiles/EnergyConsumptionFramework.elf.dir/project_elf_src_esp32.c.obj
+
+__idf_esp_gdbstub/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 832):
+	$(MAKE) -f esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/build.make esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/build
+
+__idf_esp_rom: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 905):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_rom
+
+__idf_espcoredump/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 845):
+	$(MAKE) -f esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/build.make esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/build
+
+install/local/fast: preinstall/fast
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 89):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+
+__idf_esp_hid: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1308):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_hid
+
+__idf_esp_event/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 988):
+	$(MAKE) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build
+
+__idf_app_update/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 767):
+	$(MAKE) -f esp-idf/app_update/CMakeFiles/__idf_app_update.dir/build.make esp-idf/app_update/CMakeFiles/__idf_app_update.dir/build
+
+__idf_cbor/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1222):
+	$(MAKE) -f esp-idf/cbor/CMakeFiles/__idf_cbor.dir/build.make esp-idf/cbor/CMakeFiles/__idf_cbor.dir/build
+
+uf2: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 164):
+	$(MAKE) -f CMakeFiles/Makefile2 uf2
+
+__idf_esp_adc_cal: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1295):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_adc_cal
+
+_project_elf_src/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 312):
+	$(MAKE) -f CMakeFiles/_project_elf_src.dir/build.make CMakeFiles/_project_elf_src.dir/build
+
+__idf_wear_levelling: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1490):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_wear_levelling
+
+__idf_cmock/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1248):
+	$(MAKE) -f esp-idf/cmock/CMakeFiles/__idf_cmock.dir/build.make esp-idf/cmock/CMakeFiles/__idf_cmock.dir/build
+
+bootloader/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 234):
+	$(MAKE) -f CMakeFiles/bootloader.dir/build.make CMakeFiles/bootloader.dir/build
+
+__idf_heap: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1061):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_heap
+
+__idf_unity/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1235):
+	$(MAKE) -f esp-idf/unity/CMakeFiles/__idf_unity.dir/build.make esp-idf/unity/CMakeFiles/__idf_unity.dir/build
+
+partition-table: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 723):
+	$(MAKE) -f CMakeFiles/Makefile2 partition-table
+
+__idf_soc/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1079):
+	$(MAKE) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/build
+
+uf2-app/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 273):
+	$(MAKE) -f CMakeFiles/uf2-app.dir/build.make CMakeFiles/uf2-app.dir/build
+
+encrypted-bootloader-flash/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 624):
+	$(MAKE) -f esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/build.make esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/build
+
+__idf_xtensa: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1100):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_xtensa
+
+flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 203):
+	$(MAKE) -f CMakeFiles/Makefile2 flash
+
+show-efuse-table: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 424):
+	$(MAKE) -f CMakeFiles/Makefile2 show-efuse-table
+
+efuse_custom_table/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 455):
+	$(MAKE) -f esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build
+
+__idf_esp_ipc: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 489):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_ipc
+
+app-flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 671):
+	$(MAKE) -f CMakeFiles/Makefile2 app-flash
+
+encrypted-bootloader-flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 619):
+	$(MAKE) -f CMakeFiles/Makefile2 encrypted-bootloader-flash
+
+efuse-common-table/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 403):
+	$(MAKE) -f esp-idf/efuse/CMakeFiles/efuse-common-table.dir/build.make esp-idf/efuse/CMakeFiles/efuse-common-table.dir/build
+
+__idf_tcpip_adapter: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 957):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_tcpip_adapter
+
+menuconfig: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 190):
+	$(MAKE) -f CMakeFiles/Makefile2 menuconfig
+
+__idf_openssl: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1581):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_openssl
 
 # Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_phy/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.932681275
-#  File has been updated.
-#  Successfully updated.
+.hpux_make_needs_suffix_list:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/mbedtls/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:58.136743508
-#  File has been updated.
-#  Successfully updated.
+__idf_esp_local_ctrl/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1430):
+	$(MAKE) -f esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build.make esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/wifi_provisioning/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:04.484866573
-#  File has been updated.
-#  Successfully updated.
+show_efuse_table/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 468):
+	$(MAKE) -f esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build.make esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/efuse/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.4246714
-#  File has been updated.
-#  Successfully updated.
+__idf_esp_gdbstub: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 827):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_gdbstub
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/pthread/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:02.764833259
-#  File has been updated.
-#  Successfully updated.
+__idf_sdmmc: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1438):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_sdmmc
 
-size-components:
+monitor/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 299):
+	$(MAKE) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/build
+
+__idf_jsmn/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1534):
+	$(MAKE) -f esp-idf/jsmn/CMakeFiles/__idf_jsmn.dir/build.make esp-idf/jsmn/CMakeFiles/__idf_jsmn.dir/build
+
+app_check_size: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 645):
+	$(MAKE) -f CMakeFiles/Makefile2 app_check_size
+
+__idf_app_trace: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1178):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_app_trace
+
+__idf_fatfs/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1508):
+	$(MAKE) -f esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/build.make esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/build
+
+__idf_esp_hw_support: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1087):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_hw_support
+
+__idf_newlib/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1157):
+	$(MAKE) -f esp-idf/newlib/CMakeFiles/__idf_newlib.dir/build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/build
+
+mbedcrypto/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 611):
+	$(MAKE) -f esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/build.make esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/build
+
+apidoc/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 559):
+	$(MAKE) -f esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/build.make esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/build
+
+__idf_esp_eth: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 944):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_eth
+
+__idf_protobuf-c: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1386):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_protobuf-c
+
+__idf_bt/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1209):
+	$(MAKE) -f esp-idf/bt/CMakeFiles/__idf_bt.dir/build.make esp-idf/bt/CMakeFiles/__idf_bt.dir/build
+
+__idf_esp-tls: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1282):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp-tls
+
+mbedx509: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 593):
+	$(MAKE) -f CMakeFiles/Makefile2 mbedx509
+
+project_elf_src_esp32.i: project_elf_src_esp32.c.i
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_https_server/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.664676065
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/menu.c:
+__idf_esp_netif: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 970):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_netif
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/tools/kconfig/images.c:
+__idf_asio: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1191):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_asio
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/app_update/Kconfig.projbuild:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:51.45261359
-#  File has been updated.
-#  Successfully updated.
+size-components: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 177):
+	$(MAKE) -f CMakeFiles/Makefile2 size-components
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/wpa_supplicant/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:33:04.508867037
-#  File has been updated.
-#  Successfully updated.
+efuse-custom-table: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 437):
+	$(MAKE) -f CMakeFiles/Makefile2 efuse-custom-table
 
-# Not a target:
-/home/oscar/esp_vscode/esp-idf/components/esp_https_ota/Kconfig:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-08 16:32:54.660675987
-#  File has been updated.
-#  Successfully updated.
+encrypted-flash: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 333):
+	$(MAKE) -f CMakeFiles/Makefile2 encrypted-flash
+
+__idf_esp_local_ctrl: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1425):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_local_ctrl
+
+__idf_newlib: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1152):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_newlib
+
+EnergyConsumptionFramework.elf: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 320):
+	$(MAKE) -f CMakeFiles/Makefile2 EnergyConsumptionFramework.elf
+
+partition_table_bin: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 736):
+	$(MAKE) -f CMakeFiles/Makefile2 partition_table_bin
+
+__idf_esp_ringbuf/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 377):
+	$(MAKE) -f esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/build.make esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/build
+
+__idf_wifi_provisioning: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1633):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_wifi_provisioning
+
+efuse_test_table/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 481):
+	$(MAKE) -f esp-idf/efuse/CMakeFiles/efuse_test_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_test_table.dir/build
+
+__idf_mbedtls: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 541):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_mbedtls
+
+__idf_esp_system: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 892):
+	$(MAKE) -f CMakeFiles/Makefile2 __idf_esp_system
+
+confserver: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 216):
+	$(MAKE) -f CMakeFiles/Makefile2 confserver
+
+__idf_mqtt/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1573):
+	$(MAKE) -f esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/build.make esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/build
+
+install: preinstall
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 95):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+
+rebuild_cache:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 61):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 
 # files hash-table stats:
-# Load=106/1024=10%, Rehash=0, Collisions=17/240=7%
+# Load=265/1024=26%, Rehash=0, Collisions=128/932=14%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 244 / storage = 6987 B / avg = 28 B
-# current buf: size = 8162 B / used = 6987 B / count = 244 / avg = 28 B
+# strcache buffers: 1 (0) / strings = 301 / storage = 5105 B / avg = 16 B
+# current buf: size = 8162 B / used = 5105 B / count = 301 / avg = 16 B
 
-# strcache performance: lookups = 303 / hit rate = 19%
+# strcache performance: lookups = 1476 / hit rate = 79%
 # hash-table stats:
-# Load=244/8192=3%, Rehash=0, Collisions=11/303=4%
-# Finished Make data base on Fri Jul 22 14:31:37 2022
+# Load=301/8192=4%, Rehash=0, Collisions=44/1476=3%
+# Finished Make data base on Mon Jul 25 09:55:02 2022
 
  

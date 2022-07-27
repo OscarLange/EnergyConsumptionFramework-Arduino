@@ -21,7 +21,15 @@ class Main final
         /*
         * One time execution that sets up imortant functionalities such as the WiFi
         */
-        void setup(void);
+        void wifi_setup(void);
+        /*
+        * One time execution that sets up imortant functionalities such as the Bluetooth
+        */
+        void ble_setup(void);
+        /*
+        * Main loop that runs continously with ble
+        */
+        void run_ble(void);
         /*
         * Sending a msg over tcp
         */

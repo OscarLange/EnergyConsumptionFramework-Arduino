@@ -7,6 +7,9 @@ static RTC_NOINIT_ATTR  int max_freq;
 
 char config_msg[] = "Request config";
 char work_msg[] = "Get work";
+int restart = 0;
+int work_mode = 0;
+int cpu_utilization = 0;
 
 //send msg over tcp
 bool Main::send_msg(char *payload, bool get_info, bool get_work)
@@ -18,7 +21,7 @@ bool Main::send_msg(char *payload, bool get_info, bool get_work)
     {
         case EnergyConsumptionFramework::Wifi::state_e::READY_TO_CONNECT:
             std::cout << "Wifi Status: READY_TO_CONNECT\n";
-            Wifi.Begin();
+            TCPClient.tcp_client_task(payload, get_info, get_work);
             return 0;
         case EnergyConsumptionFramework::Wifi::state_e::DISCONNECTED:
             std::cout << "Wifi Status: DISCONNECTED\n";
@@ -49,6 +52,81 @@ bool Main::send_msg(char *payload, bool get_info, bool get_work)
 
 //function in C to collect statistics
 extern "C" void collect_stats(struct TABLE_ENTRY entries[], int work_mode, int cpu_util);
+extern "C" void start_ble(void);
+extern "C" char* retrieve_data(size_t new_mode);
+extern "C" int get_config_size(void);
+
+//main work function for collecting stats
+void Main::run_ble(void)
+{    
+    //get frequency
+    esp_pm_config_esp32_t pm_config;
+    esp_pm_get_configuration(&pm_config);
+
+    std::cout << "Start working: " << work_mode << ";" << cpu_utilization << ";" << pm_config.max_freq_mhz << "\n";
+
+    retrieve_data(3);
+    //collect stats
+    struct TABLE_ENTRY entries[11] = {};
+    collect_stats(entries, work_mode, cpu_utilization);
+    char* stop = retrieve_data(4);
+    int msg_size = get_config_size();
+    std::string s_stop(stop);
+    std::string subs_stop = s_stop.substr(0, msg_size);
+    int int_stop = std::stoi(subs_stop);
+    std::cout << int_stop << "\n";
+
+    //building string
+    //encode the collected metrics to be sent to the server
+    std::stringstream entries_stream{};
+    for(auto &entry: entries)
+    {
+        std::string s_entry = std::string(entry.task_name);
+        if(s_entry.substr(0, sizeof(NONE_VALUE)) != std::string(NONE_VALUE))
+        {
+            entries_stream << entry.task_name << "," << entry.elapsed_time << "," << entry.percentage_time <<";";
+        }
+        entries_stream << "MIN_FREQ," << pm_config.min_freq_mhz << ";MAX_FREQ," <<pm_config.max_freq_mhz << ";";
+    }
+    auto final = entries_stream.str();
+    std::cout << final << "\n";
+    
+    if(int_stop == 1)
+    {
+        //retrieve new work (type of operation, work utilization)
+        //Seting work
+        //Seting work
+        char* work = retrieve_data(1);
+        msg_size = get_config_size();
+        std::string s_work(work);
+        std::string subs_work = s_work.substr(0, msg_size);
+        work_mode = std::stoi(subs_work);
+        std::cout << work_mode << "\n";
+
+        vTaskDelay(pdMS_TO_TICKS(1000));
+        char* cpu = retrieve_data(2);
+        msg_size = get_config_size();
+        std::string s_cpu(cpu);
+        std::string subs_cpu = s_cpu.substr(0, msg_size);
+        cpu_utilization = std::stoi(subs_cpu);
+        std::cout << cpu_utilization << "\n";
+
+    } else if(int_stop == 2)
+    {
+        //retrieve new frequency
+        char* freq = retrieve_data(0);
+        msg_size = get_config_size();
+        std::string s_freq(freq);
+        std::string subs_freq = s_freq.substr(0, msg_size);
+        int int_freq = std::stoi(subs_freq);
+        std::cout << int_freq << "\n";
+        
+        //store frequency for reset
+        max_freq = int_freq;
+        vTaskDelay(pdMS_TO_TICKS(500));
+        esp_restart();
+    }
+}
 
 //main work function for collecting stats
 void Main::run(void)
@@ -119,7 +197,71 @@ void Main::run(void)
     }
 }
 
-void Main::setup(void)
+void print_char_array(char* msg, int msg_size)
+{
+    std::cout << "-----------------------------------------------------\n";
+    for(int i=0 ; i<msg_size ; ++i)
+    {
+        std::cout << msg[i];
+    }
+    std::cout << "\n";
+    std::cout << "-----------------------------------------------------\n";
+}
+
+void Main::ble_setup(void)
+{
+    int msg_size = 0;
+    //get the reason for the reset of esp
+    esp_reset_reason_t reason = esp_reset_reason();
+
+    //if its a software reset then setup frequency and wifi
+    if(reason == ESP_RST_SW)
+    {
+        //setup cpu frequency
+        esp_pm_config_esp32_t pm_config = {
+            .max_freq_mhz = max_freq,
+            .min_freq_mhz = max_freq,
+            .light_sleep_enable = false
+        };
+        ESP_ERROR_CHECK( esp_pm_configure(&pm_config) );
+
+        //setup bluetooth
+        start_ble();
+        vTaskDelay(pdMS_TO_TICKS(500));
+
+        //Seting work
+        char* work = retrieve_data(1);
+        msg_size = get_config_size();
+        std::string s_work(work);
+        std::string subs_work = s_work.substr(0, msg_size);
+        work_mode = std::stoi(subs_work);
+        std::cout << work_mode << "\n";
+
+        vTaskDelay(pdMS_TO_TICKS(1000));
+        char* cpu = retrieve_data(2);
+        msg_size = get_config_size();
+        std::string s_cpu(cpu);
+        std::string subs_cpu = s_cpu.substr(0, msg_size);
+        cpu_utilization = std::stoi(subs_cpu);
+        std::cout << cpu_utilization << "\n";
+
+    } else {
+        start_ble();
+        char* freq = retrieve_data(0);
+        msg_size = get_config_size();
+        std::string s_freq(freq);
+        std::string subs_freq = s_freq.substr(0, msg_size);
+        int int_freq = std::stoi(subs_freq);
+        std::cout << int_freq << "\n";
+        
+        //store frequency for reset
+        max_freq = int_freq;
+        vTaskDelay(pdMS_TO_TICKS(500));
+        esp_restart();
+    }
+}
+
+void Main::wifi_setup(void)
 {
     //get the reason for the reset of esp
     esp_reset_reason_t reason = esp_reset_reason();
@@ -140,6 +282,8 @@ void Main::setup(void)
         nvs_flash_init();
         Wifi.SetCredentials("", "");
         Wifi.Init();
+        Wifi.Begin();
+        vTaskDelay(pdMS_TO_TICKS(500));
 
         //Seting work
         std::cout << work_msg << "\n";
@@ -148,7 +292,7 @@ void Main::setup(void)
         //setup wifi
         esp_event_loop_create_default();
         nvs_flash_init();
-        Wifi.SetCredentials("", "");
+        Wifi.SetCredentials("PYUR 6C93E", "BjJZ44b2B7hb");
         Wifi.Init();
 
         //send msg to rasberry to get config values
@@ -170,7 +314,10 @@ extern "C" void app_main(void)
     vTaskDelay(pdMS_TO_TICKS(100));
 
     //connect to wifi
-    App.setup();
+    //App.wifi_setup();
+
+    //connect to bluetooth
+    App.ble_setup();
 
     int i = 0;
 
@@ -181,7 +328,7 @@ extern "C" void app_main(void)
     while(i < Main::iteration_amount)
     {
         //do the main work
-        App.run();
+        App.run_ble();
         i++;
         vTaskDelay(pdMS_TO_TICKS(100));
     }

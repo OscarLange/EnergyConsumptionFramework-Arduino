@@ -1,0 +1,2 @@
+/home/oscar/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ar qc libsrc.a  CMakeFiles/__idf_src.dir/main.cpp.obj CMakeFiles/__idf_src.dir/wifi/wifi.cpp.obj CMakeFiles/__idf_src.dir/tcp/tcp.cpp.obj CMakeFiles/__idf_src.dir/work/work.c.obj CMakeFiles/__idf_src.dir/bluetooth/bluetooth.c.obj
+/home/oscar/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ranlib libsrc.a

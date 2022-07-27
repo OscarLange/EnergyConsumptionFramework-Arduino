@@ -414,6 +414,7 @@
 /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/esp-idf/bt/CMakeFiles/list_install_components.dir
 /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/esp-idf/bt/CMakeFiles/rebuild_cache.dir
 /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/esp-idf/bt/CMakeFiles/edit_cache.dir
+/home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/esp-idf/bt/CMakeFiles/__idf_bt.dir
 /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/esp-idf/cbor/CMakeFiles/install/local.dir
 /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/esp-idf/cbor/CMakeFiles/install.dir
 /home/oscar/Dokumente/UNI/6.Semester/MasterThesis/EnergyConsumptionFramework-Arduino/EnergyConsumptionFramework/build/esp-idf/cbor/CMakeFiles/list_install_components.dir
