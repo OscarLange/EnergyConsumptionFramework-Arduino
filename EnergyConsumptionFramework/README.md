@@ -17,10 +17,10 @@ Some configurations have to be enabled through idf.py menuconfig:
     - CONFIG_BT_BLE_ENABLED
     - CONFIG_BT_GATTS_ENABLE
 2. Disable watchdog:
-    Open menuconfig: make menuconfig
-    Enter component config
-    Enter ESP32-specific
-    Remove star from interrupt watchdog
+    - Open menuconfig: make menuconfig
+    - Enter component config
+    - Enter ESP32-specific
+    - Remove star from interrupt watchdog
 
 
 ## Folder contents
